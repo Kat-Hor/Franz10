@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--
+  Original author: Horlacher (10ab)
+  Created: 2026-10-19
+  This material was created for Horlacher's own French class (10ab).
+  Not authorized for redistribution under a different author's name.
+-->
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les Relatifs — 10ab</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="home-link" href="index.html">← Accueil</a>
+
+  <div class="hero">
+    <div class="bubble">Le livre dont je parle !</div>
+    <div class="eyebrow">Grammaire · fiche de travail</div>
+    <h1>Les Relatifs</h1>
+    <p>qui, que, où, dont: Damit verbindest du zwei Sätze zu einem. Erst die Karten umdrehen, dann üben.</p>
+  </div>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="karten">Merk-Karten</button>
+    <button class="tab-btn" data-tab="spick">Spickzettel</button>
+    <button class="tab-btn" data-tab="uebung">Üben</button>
+    <button class="tab-btn" data-tab="verbinden">Sätze verbinden</button>
+    <button class="tab-btn" data-tab="mix">Welches nehme ich?</button>
+  </nav>
+
+  <!-- ===================== MERK-KARTEN ===================== -->
+  <section class="panel active" id="karten">
+    <h2 class="section-head">Relativpronomen: wofür sind sie gut?</h2>
+    <p class="section-lead">Ein Relativpronomen verbindet zwei Sätze und sagt mehr über ein Nomen. Tippe auf die Karte – hinten findest du Beispiele und Fallen.</p>
+
+    <div class="flip-tools">
+      <div class="hint">Tipp: Erst vorne lesen, dann raten, dann umdrehen und prüfen.</div>
+      <button class="btn-big" id="flipAll" type="button">Alle umdrehen</button>
+      <button class="btn-big alt" id="flipNone" type="button">Alle zurück</button>
+    </div>
+
+    <div id="kartenMount"></div>
+
+    <div class="rule-box" style="margin-top:28px;">
+      <b>Kurz gesagt:</b> <b>qui</b> = Subjekt, <b>que</b> = Objekt, <b>où</b> = Ort und Zeit, <b>dont</b> = de + … Im Französischen kann man das Relativpronomen nie weglassen (anders als im Englischen).
+    </div>
+  </section>
+
+  <!-- ===================== SPICKZETTEL ===================== -->
+  <section class="panel" id="spick">
+    <h2 class="section-head">Der Spickzettel</h2>
+    <p class="section-lead">Alles zum Nachschlagen auf einer Seite. Du kannst ihn auch ausdrucken.</p>
+    <div class="flip-tools">
+      <div class="hint">Beim Ausdrucken wird nur der Spickzettel gedruckt.</div>
+      <button class="btn-big alt" id="printSpick" type="button">Spickzettel drucken</button>
+    </div>
+
+    <div class="print-area">
+      <div class="card">
+        <h3 class="sheet-title">Die vier Relativpronomen</h3>
+        <table class="mini">
+          <tr><th>Pronomen</th><th>Funktion</th><th>Beispiel</th></tr>
+          <tr><td><b>qui</b></td><td>Subjekt</td><td>le garçon <b>qui</b> chante</td></tr>
+          <tr><td><b>que</b> (qu')</td><td>direktes Objekt</td><td>le film <b>que</b> tu regardes</td></tr>
+          <tr><td><b>où</b></td><td>Ort und Zeit</td><td>la ville <b>où</b> j'habite</td></tr>
+          <tr><td><b>dont</b></td><td>de + …, dessen / deren</td><td>le livre <b>dont</b> je parle</td></tr>
+        </table>
+      </div>
+
+      <div class="sheet-grid" style="margin-bottom:22px;">
+        <div class="card">
+          <h3 class="sheet-title">Welches nehme ich?</h3>
+          <ul class="rules-list">
+            <li><b>1.</b> Ort oder Zeit? → <b>où</b></li>
+            <li><b>2.</b> Steht im Relativsatz ein <i>de</i>, oder ist es „dessen / deren“? → <b>dont</b></li>
+            <li><b>3.</b> Folgt direkt ein Verb? → <b>qui</b></li>
+            <li><b>4.</b> Folgt ein Subjekt? → <b>que</b></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="sheet-title">Ohne Bezugswort</h3>
+          <table class="mini">
+            <tr><th></th><th>Beispiel</th></tr>
+            <tr><td><b>ce qui</b></td><td>Je sais ce qui se passe.</td></tr>
+            <tr><td><b>ce que</b></td><td>Dis-moi ce que tu veux.</td></tr>
+            <tr><td><b>ce dont</b></td><td>C'est ce dont j'ai besoin.</td></tr>
+          </table>
+          <p class="matrix-note">Wie oben: qui = Subjekt, que = Objekt, dont = de + …</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="sheet-title">Fallen</h3>
+        <ul class="rules-list">
+          <li><b>qui</b> bleibt immer qui. <b>que</b> wird vor Vokal zu <b>qu'</b>: le livre qu'elle lit.</li>
+          <li>Nach <b>dont</b> steht kein son / sa / ses: la fille <b>dont le père</b> est médecin.</li>
+          <li>Nach Präposition steht bei Personen <b>qui</b>: l'ami avec qui je joue.</li>
+          <li>Nach jour, moment, année nimmst du <b>où</b>, nicht quand: le jour où il est arrivé.</li>
+          <li>Bei <b>que</b> gleicht sich das participe passé an: les photos que j'ai prises.</li>
+          <li>Ein Relativpronomen darf man nie weglassen: le film que tu regardes (nicht: le film tu regardes).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ÜBEN ===================== -->
+  <section class="panel" id="uebung">
+    <h2 class="section-head">Üben, Pronomen für Pronomen</h2>
+    <p class="section-lead">Such dir das Pronomen aus, bei dem du noch unsicher bist. Es gibt Auswahl-Aufgaben und Aufgaben zum Eintippen.</p>
+
+    <div class="subnav-group">
+      <div class="subnav">
+        <button class="subnav-btn active c-a" data-target="u-quique" type="button">qui oder que?</button>
+        <button class="subnav-btn c-b" data-target="u-ou" type="button">où</button>
+        <button class="subnav-btn c-c" data-target="u-dont" type="button">dont</button>
+        <button class="subnav-btn c-reg" data-target="u-ce" type="button">ce qui / ce que</button>
+      </div>
+
+      <div class="subpanel active" id="u-quique">
+        <div class="rule-box" style="margin-top:0;"><b>Das übst du:</b> Folgt direkt ein Verb, nimmst du <i>qui</i>. Folgt ein Subjekt, nimmst du <i>que</i>.</div>
+        <div class="quiz" data-set="quique"></div>
+      </div>
+      <div class="subpanel" id="u-ou">
+        <div class="rule-box" style="margin-top:0;"><b>Das übst du:</b> <i>où</i> für Orte und Zeitangaben.</div>
+        <div class="quiz" data-set="ou"></div>
+      </div>
+      <div class="subpanel" id="u-dont">
+        <div class="rule-box" style="margin-top:0;"><b>Das übst du:</b> <i>dont</i> bei Verben mit <i>de</i> und für „dessen / deren“.</div>
+        <div class="quiz" data-set="dont"></div>
+      </div>
+      <div class="subpanel" id="u-ce">
+        <div class="rule-box" style="margin-top:0;"><b>Das übst du:</b> <i>ce qui, ce que, ce dont</i>, wenn kein Nomen davor steht.</div>
+        <div class="quiz" data-set="ce"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SÄTZE VERBINDEN ===================== -->
+  <section class="panel" id="verbinden">
+    <h2 class="section-head">Aus zwei Sätzen wird einer</h2>
+    <p class="section-lead">Das Relativpronomen ersetzt ein Wort aus dem zweiten Satz und hängt ihn an das Nomen im ersten.</p>
+
+    <div class="subnav-group">
+      <div class="subnav">
+        <button class="subnav-btn active c-a" data-target="v-labor" type="button">Das Satzlabor</button>
+        <button class="subnav-btn c-b" data-target="v-ueben" type="button">Üben</button>
+      </div>
+
+      <div class="subpanel active" id="v-labor">
+        <div class="rule-box" style="margin-top:0;">
+          <b>Vorgehen:</b> Welches Wort im zweiten Satz wird ersetzt? Subjekt → <b>qui</b>, Objekt → <b>que</b>, Ort / Zeit → <b>où</b>, de + … → <b>dont</b>.
+        </div>
+        <div class="card">
+          <h3>Wähle eine Situation <span class="tag">klick!</span></h3>
+          <div class="scn-nav" id="scnNav"></div>
+          <div id="scnView"></div>
+        </div>
+      </div>
+
+      <div class="subpanel" id="v-ueben">
+        <div class="quiz" data-set="verbinden"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MIX ===================== -->
+  <section class="panel" id="mix">
+    <h2 class="section-head">Welches nehme ich?</h2>
+    <p class="section-lead">Jetzt kommt alles gemischt: qui, que, où und dont. Denk an die vier Fragen vom Spickzettel.</p>
+    <div class="quiz" data-set="mix"></div>
+  </section>
+
+  <footer class="foot">10ab Horlacher</footer>
+</div>
+
+<script src="engine.js"></script>
+<script>
+// ===================== MERK-KARTEN =====================
+const TRICK = (tag, text) => `<div class="trick"><b>${tag}</b>${text}</div>`;
+
+const CARDS = {
+  qui: { cls:'k-sujet', badge:'MUSS SITZEN',
+    title:'Wer oder was macht’s?', name:'QUI · Subjekt',
+    wozu:'Ersetzt das <u>Subjekt</u> im Relativsatz, Person oder Sache. Direkt hinter qui steht das Verb.',
+    trick:['MERKE','qui + Verb. Und qui bleibt immer qui, auch vor Vokal: qui arrive.'],
+    fr:'Le garçon qui chante est mon frère.', de:'Der Junge, der singt, ist mein Bruder.',
+    back:`<div class="bhead">qui</div>
+      ${TRICK('PERSON','Le prof qui parle est nouveau.')}
+      ${TRICK('SACHE','Le livre qui est sur la table est à moi.')}
+      ${TRICK('MIT PRÄPOSITION','Nur bei Personen: l’ami avec qui je joue, la fille à qui je parle.')}` },
+  que: { cls:'k-cod', badge:'MUSS SITZEN',
+    title:'Wen oder was?', name:'QUE · direktes Objekt',
+    wozu:'Ersetzt das <u>direkte Objekt</u> im Relativsatz. Danach folgt ein neues Subjekt.',
+    trick:['MERKE','que + Subjekt. Vor Vokal wird que zu qu’: le livre qu’il lit.'],
+    fr:'Le film que tu regardes est super.', de:'Der Film, den du schaust, ist super.',
+    back:`<div class="bhead">que</div>
+      ${TRICK('PERSON','La fille que je connais s’appelle Léa.')}
+      ${TRICK('PASSÉ COMPOSÉ','Das participe passé gleicht sich an das Bezugswort an: les photos que j’ai prises.')}
+      ${TRICK('UNTERSCHIED','Folgt direkt ein Verb, nimmst du qui. Folgt ein Subjekt, nimmst du que.')}` },
+  ou: { cls:'k-refl', badge:'MUSS SITZEN',
+    title:'Wo und wann?', name:'OÙ · Ort und Zeit',
+    wozu:'Ersetzt eine <u>Orts- oder Zeitangabe</u>: die Stadt, in der …, der Tag, an dem …',
+    trick:['MERKE','Nach jour, moment, année nimmst du où, nicht quand.'],
+    fr:'La ville où j’habite est petite.', de:'Die Stadt, in der ich wohne, ist klein.',
+    back:`<div class="bhead">où</div>
+      ${TRICK('ORT','Le café où je travaille est près de l’école.')}
+      ${TRICK('ZEIT','Le jour où il est arrivé, il pleuvait.')}
+      ${TRICK('MIT PRÄPOSITION','d’où (woher), par où (wodurch): le pays d’où il vient.')}` },
+  dont: { cls:'k-coi', badge:'MUSS SITZEN',
+    title:'Von wem oder wovon?', name:'DONT · de + …',
+    wozu:'Ersetzt <u>de + Nomen</u>: bei Verben und Ausdrücken mit de und für „dessen / deren“.',
+    trick:['MERKE','dont + Subjekt. Danach steht nie son, sa, ses: la fille dont le père est médecin.'],
+    fr:'Le livre dont je parle est nouveau.', de:'Das Buch, von dem ich spreche, ist neu.',
+    back:`<div class="bhead">dont</div>
+      ${TRICK('VERBEN MIT DE','parler de, avoir besoin de, avoir peur de, avoir envie de, se souvenir de, rêver de, s’occuper de')}
+      ${TRICK('BESITZ','La fille dont le père est médecin = die Tochter, deren Vater Arzt ist.')}
+      ${TRICK('PROBE','Fehlt im Relativsatz ein „de“? Il parle de ce film → le film dont il parle.')}` },
+  ce: { cls:'k-pp', badge:'FÜR PROFIS', pro:true,
+    title:'Ohne Bezugswort', name:'CE QUI · CE QUE · CE DONT',
+    wozu:'Wenn kein Nomen davor steht, sondern „das, was …“: Ich weiß, was passiert.',
+    trick:['MERKE','Die Regel bleibt gleich: ce qui = Subjekt, ce que = Objekt, ce dont = de + …'],
+    fr:'Je sais ce qui se passe.', de:'Ich weiß, was passiert.',
+    back:`<div class="bhead">ce qui · ce que · ce dont</div>
+      ${TRICK('CE QUI','Ce qui m’intéresse, c’est la musique.')}
+      ${TRICK('CE QUE','Dis-moi ce que tu veux.')}
+      ${TRICK('CE DONT','Voilà ce dont j’ai besoin.')}
+      ${TRICK('TOUT','Tout ce que tu dis est vrai.')}` }
+};
+
+const GROUPS = [
+  { head:'Die vier Relativpronomen', sub:'verbinden zwei Sätze', ids:['qui','que','ou','dont'] },
+  { head:'Ohne Bezugswort', sub:'das, was …', ids:['ce'] }
+];
+
+function cardHTML(c){
+  return `<div class="flip ${c.cls}" tabindex="0" role="button" aria-pressed="false">
+    <div class="face front">
+      <span class="badge${c.pro?' pro':''}">${c.badge}</span>
+      <h4 class="ftitle">${c.title}</h4>
+      <div class="fname">${c.name}</div>
+      <p class="wozu">${c.wozu}</p>
+      <div class="trick"><b>${c.trick[0]}</b>${c.trick[1]}</div>
+      <div class="fex"><span class="fr">${c.fr}</span><span class="de">${c.de}</span></div>
+      <div class="tap">Tippen zum Umdrehen ›</div>
+    </div>
+    <div class="face back">
+      ${c.back}
+      <div class="tap">‹ Tippen zum Zurückdrehen</div>
+    </div>
+  </div>`;
+}
+document.getElementById('kartenMount').innerHTML = GROUPS.map(g =>
+  `<h3 class="grp-head">${g.head} <small>${g.sub}</small></h3>
+   <div class="flip-grid">${g.ids.map(id=>cardHTML(CARDS[id])).join('')}</div>`
+).join('');
+
+function toggleFlip(el, force){
+  const open = force===undefined ? !el.classList.contains('open') : force;
+  el.classList.toggle('open', open);
+  el.setAttribute('aria-pressed', open ? 'true' : 'false');
+}
+document.querySelectorAll('.flip').forEach(el=>{
+  el.addEventListener('click', ()=>toggleFlip(el));
+  el.addEventListener('keydown', e=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); toggleFlip(el); } });
+});
+document.getElementById('flipAll').addEventListener('click', ()=>document.querySelectorAll('.flip').forEach(el=>toggleFlip(el,true)));
+document.getElementById('flipNone').addEventListener('click', ()=>document.querySelectorAll('.flip').forEach(el=>toggleFlip(el,false)));
+
+// ===== Spickzettel drucken =====
+document.getElementById('printSpick').addEventListener('click', ()=>{
+  document.body.classList.add('printing-spick');
+  const done = ()=>{ document.body.classList.remove('printing-spick'); window.removeEventListener('afterprint', done); };
+  window.addEventListener('afterprint', done);
+  window.print();
+});
+
+// ===================== SATZLABOR =====================
+const scenarios = [
+  { label:'qui', before:"Le garçon est mon frère.<br>Il chante.", after:"Le garçon <b class='pron'>qui</b> chante est mon frère.",
+    rule:"<i>Il</i> ist das <b>Subjekt</b> des zweiten Satzes, also <b>qui</b>. Direkt danach folgt das Verb." },
+  { label:'que', before:"Le film est super.<br>Tu regardes ce film.", after:"Le film <b class='pron'>que</b> tu regardes est super.",
+    rule:"<i>ce film</i> ist das <b>direkte Objekt</b>, also <b>que</b>. Danach folgt das Subjekt <i>tu</i>." },
+  { label:'qu’ vor Vokal', before:"C'est le livre.<br>Elle lit ce livre.", after:"C'est le livre <b class='pron'>qu'</b>elle lit.",
+    rule:"Vor einem Vokal wird <b>que</b> zu <b>qu'</b>. Das Wort <b>qui</b> dagegen bleibt immer qui." },
+  { label:'que + Angleichung', before:"Les photos sont belles.<br>Tu as pris ces photos.", after:"Les photos <b class='pron'>que</b> tu as <b>prises</b> sont belles.",
+    rule:"Das direkte Objekt steht vor dem Verb, deshalb gleicht sich das participe passé an: photos ist weiblich Plural, also <i>prises</i>." },
+  { label:'où (Ort)', before:"La ville est petite.<br>J'habite dans cette ville.", after:"La ville <b class='pron'>où</b> j'habite est petite.",
+    rule:"Eine Ortsangabe (dans, à, en + Ort) wird zu <b>où</b>." },
+  { label:'où (Zeit)', before:"Le jour était froid.<br>Nous sommes partis ce jour-là.", after:"Le jour <b class='pron'>où</b> nous sommes partis était froid.",
+    rule:"Auch eine Zeitangabe wird zu <b>où</b>, nach jour, moment, année." },
+  { label:'dont (de)', before:"Le livre est nouveau.<br>Je parle de ce livre.", after:"Le livre <b class='pron'>dont</b> je parle est nouveau.",
+    rule:"<i>parler de</i> hat ein <b>de</b>, also <b>dont</b>. Danach folgt das Subjekt." },
+  { label:'dont (dessen)', before:"J'ai une amie.<br>Son père est médecin.", after:"J'ai une amie <b class='pron'>dont</b> le père est médecin.",
+    rule:"Besitz heißt „dessen / deren“: <b>dont + Artikel</b>. Das <i>son</i> fällt weg." }
+];
+const scnNav = document.getElementById('scnNav');
+const scnView = document.getElementById('scnView');
+function showScenario(i){
+  const s = scenarios[i];
+  scnNav.querySelectorAll('.scn-btn').forEach((b,idx)=>b.classList.toggle('active', idx===i));
+  scnView.innerHTML = `
+    <div class="scn-row">
+      <div class="scn-box"><small>ZWEI SÄTZE</small>${s.before}</div>
+      <div class="scn-arrow">➜</div>
+      <div class="scn-box after"><small>EIN SATZ</small>${s.after}</div>
+    </div>
+    <div class="rule-box" style="margin-bottom:0;">${s.rule}</div>`;
+}
+scenarios.forEach((s,i)=>{
+  const b = document.createElement('button');
+  b.className = 'scn-btn'; b.type = 'button'; b.textContent = s.label;
+  b.addEventListener('click', ()=>showScenario(i));
+  scnNav.appendChild(b);
+});
+showScenario(0);
+
+// ===================== ÜBUNGSSÄTZE =====================
+const SETS = {
+  quique: [
+    { t:'mc', q:"Le garçon ______ joue au foot est mon frère.", o:["qui","que","dont"], c:0, e:"Direkt danach folgt das Verb (joue), also qui." },
+    { t:'mc', q:"Le film ______ tu regardes est super.", o:["qui","que","où"], c:1, e:"Danach folgt ein Subjekt (tu), also que." },
+    { t:'mc', q:"La fille ______ j'ai vue hier s'appelle Léa.", o:["qui","que","dont"], c:1, e:"Das Mädchen ist direktes Objekt (ich habe sie gesehen), danach folgt das Subjekt j': que." },
+    { t:'mc', q:"Les gens ______ habitent ici sont sympas.", o:["que","qui","dont"], c:1, e:"Die Leute sind das Subjekt von habitent: qui." },
+    { t:'mc', q:"L'ami avec ______ je joue est drôle.", o:["qui","que","dont"], c:0, e:"Nach einer Präposition steht bei Personen qui: avec qui." },
+    { t:'fill', q:"Voilà le livre ______ elle a acheté.", a:["qu'"], e:"Objekt, und vor Vokal wird que zu qu': le livre qu'elle a acheté." },
+    { t:'fill', q:"C'est la voiture ______ roule vite.", a:["qui"], e:"Subjekt, direkt danach das Verb: qui." },
+    { t:'fill', q:"Les photos ______ tu as prises sont belles.", a:["que"], e:"Objekt, danach das Subjekt tu: que. Das participe passé gleicht sich an: prises." }
+  ],
+  ou: [
+    { t:'mc', q:"La ville ______ j'habite est petite.", o:["où","qui","que"], c:0, e:"Ortsangabe: où." },
+    { t:'mc', q:"Le jour ______ il est arrivé, il pleuvait.", o:["que","où","quand"], c:1, e:"Nach jour, moment, année nimmst du où." },
+    { t:'mc', q:"Le pays ______ il vient est très beau. <i>(woher)</i>", o:["d'où","dont","où"], c:0, e:"Woher heißt d'où." },
+    { t:'fill', q:"Voici le café ______ je travaille.", a:["où"], e:"Ortsangabe: où." },
+    { t:'puz', de:"Hier ist das Haus, in dem ich lebe.", w:["Voici","la","maison","où","je","vis"] },
+    { t:'puz', de:"Die Stadt, wo meine Oma wohnt, ist schön.", w:["La","ville","où","ma","grand-mère","habite","est","belle"] }
+  ],
+  dont: [
+    { t:'mc', q:"Le livre ______ je parle est nouveau.", o:["dont","que","qui"], c:0, e:"parler de, also dont." },
+    { t:'mc', q:"J'ai un ami ______ le père est pilote.", o:["dont","qui","que"], c:0, e:"Besitz, „dessen Vater“: dont + le père." },
+    { t:'mc', q:"C'est la chose ______ j'ai besoin.", o:["que","dont","où"], c:1, e:"avoir besoin de, also dont." },
+    { t:'mc', q:"La fille ______ je t'ai parlé s'appelle Léa.", o:["dont","qui","que"], c:0, e:"parler de qn, also dont." },
+    { t:'mc', q:"Voilà le film ______ elle rêve.", o:["dont","qui","que"], c:0, e:"rêver de, also dont." },
+    { t:'mc', q:"Welcher Satz ist richtig?", o:["La fille dont le père est médecin.","La fille dont son père est médecin.","La fille que son père est médecin."], c:0, e:"Nach dont steht kein son, sa, ses, sondern der Artikel: dont le père." },
+    { t:'fill', q:"La ville ______ je me souviens est belle.", a:["dont"], e:"se souvenir de, also dont." },
+    { t:'fill', q:"J'ai un chat ______ la queue est noire.", a:["dont"], e:"„dessen Schwanz“: dont la queue." }
+  ],
+  ce: [
+    { t:'mc', q:"Je sais ______ se passe. <i>(was)</i>", o:["ce qui","ce que","ce dont"], c:0, e:"Subjekt, danach das Verb: ce qui." },
+    { t:'mc', q:"Dis-moi ______ tu veux.", o:["ce qui","ce que","ce dont"], c:1, e:"Objekt, danach das Subjekt tu: ce que." },
+    { t:'mc', q:"Voilà ______ j'ai besoin.", o:["ce que","ce dont","ce qui"], c:1, e:"avoir besoin de, also ce dont." },
+    { t:'mc', q:"______ m'intéresse, c'est la musique.", o:["Ce qui","Ce que","Ce dont"], c:0, e:"Subjekt: Ce qui m'intéresse." },
+    { t:'mc', q:"Tout ______ tu dis est vrai.", o:["ce que","ce qui","ce dont"], c:0, e:"Objekt: tout ce que." },
+    { t:'fill', q:"Je sais ______ tu penses.", a:["ce que"], e:"Objekt, danach das Subjekt tu: ce que." },
+    { t:'fill', q:"Raconte-moi ______ est arrivé hier.", a:["ce qui"], e:"Subjekt, danach das Verb: ce qui." },
+    { t:'fill', q:"C'est exactement ______ je rêve.", a:["ce dont"], e:"rêver de, also ce dont." }
+  ],
+  verbinden: [
+    { t:'fill', q:"J'ai un ami. Il habite à Lyon. → Schreibe einen Satz.", a:["j'ai un ami qui habite à lyon"], e:"Il ist Subjekt, also qui: J'ai un ami qui habite à Lyon." },
+    { t:'fill', q:"Voilà le livre. Je l'ai acheté hier. → Schreibe einen Satz.", a:["voilà le livre que j'ai acheté hier","voila le livre que j'ai acheté hier"], e:"Objekt, also que: Voilà le livre que j'ai acheté hier." },
+    { t:'fill', q:"Voici la maison. Je vis dans cette maison. → Schreibe einen Satz.", a:["voici la maison où je vis"], e:"dans + Ort wird zu où: Voici la maison où je vis." },
+    { t:'fill', q:"Le film est super. Je t'ai parlé de ce film. → Schreibe einen Satz.", a:["le film dont je t'ai parlé est super"], e:"parler de, also dont: Le film dont je t'ai parlé est super." },
+    { t:'mc', q:"J'aime le pull. Tu portes ce pull.", o:["J'aime le pull que tu portes.","J'aime le pull qui tu portes.","J'aime le pull dont tu portes."], c:0, e:"ce pull ist direktes Objekt, danach folgt das Subjekt tu: que." },
+    { t:'mc', q:"Les élèves sont en retard. Ils habitent loin.", o:["Les élèves qui habitent loin sont en retard.","Les élèves que habitent loin sont en retard.","Les élèves où habitent loin sont en retard."], c:0, e:"Ils ist Subjekt, danach das Verb: qui." },
+    { t:'puz', de:"Das Mädchen, das ich kenne, ist Léa.", w:["La","fille","que","je","connais","est","Léa"] },
+    { t:'puz', de:"Der Film, von dem er spricht, ist neu.", w:["Le","film","dont","il","parle","est","nouveau"] }
+  ],
+  mix: [
+    { t:'mc', q:"La femme ______ travaille ici est ma tante.", o:["qui","que","dont"], c:0, e:"Danach folgt das Verb: qui." },
+    { t:'mc', q:"Le cadeau ______ j'ai reçu est génial.", o:["qui","que","où"], c:1, e:"Objekt, danach das Subjekt j': que." },
+    { t:'mc', q:"Le village ______ nous habitons est calme.", o:["où","que","dont"], c:0, e:"Ortsangabe: où." },
+    { t:'mc', q:"Le chien ______ j'ai peur est grand.", o:["dont","que","où"], c:0, e:"avoir peur de, also dont." },
+    { t:'mc', q:"L'élève ______ le prof parle est nouveau.", o:["dont","que","qui"], c:0, e:"parler de, also dont." },
+    { t:'fill', q:"Les enfants ______ jouent dans le parc sont heureux.", a:["qui"], e:"Subjekt, danach das Verb: qui." },
+    { t:'fill', q:"Le gâteau ______ ma mère a fait est délicieux.", a:["que"], e:"Objekt, danach das Subjekt ma mère: que." },
+    { t:'fill', q:"Le film ______ tu m'as parlé est drôle.", a:["dont"], e:"parler de, also dont." },
+    { t:'puz', de:"Da ist der Junge, den ich kenne.", w:["Voilà","le","garçon","que","je","connais"] },
+    { t:'puz', de:"Das Buch, das auf dem Tisch liegt, ist neu.", w:["Le","livre","qui","est","sur","la","table","est","nouveau"] }
+  ]
+};
+document.querySelectorAll('.quiz').forEach(el=>mountQuiz(el, SETS[el.dataset.set]));
+</script>
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!--
+  Original author: Horlacher (10ab)
+  Created: 2026-10-06
+  This material was created for Horlacher's own French class (10ab).
+  Not authorized for redistribution under a different author's name.
+-->
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les Pronoms — 10ab</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="home-link" href="index.html">← Accueil</a>
+
+  <div class="hero">
+    <div class="bubble">Je le lui dis !</div>
+    <div class="eyebrow">Grammaire · fiche de travail</div>
+    <h1>Les Pronoms</h1>
+    <p>Erst die Karten umdrehen, dann üben. Im Spickzettel steht alles auf einen Blick.</p>
+  </div>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="karten">Merk-Karten</button>
+    <button class="tab-btn" data-tab="spick">Spickzettel</button>
+    <button class="tab-btn" data-tab="uebung">Üben</button>
+    <button class="tab-btn" data-tab="stellung">Stellung</button>
+    <button class="tab-btn" data-tab="zwei">Zwei Pronomen</button>
+  </nav>
+
+  <!-- ===================== MERK-KARTEN ===================== -->
+  <section class="panel active" id="karten">
+    <h2 class="section-head">Welches Pronomen ist wofür gut?</h2>
+    <p class="section-lead">Vorne steht, wofür du das Pronomen brauchst. Tippe auf die Karte – hinten findest du alle Formen. Karten mit <span class="badge" style="transform:none;">MUSS SITZEN</span> solltest du im Schlaf können.</p>
+
+    <div class="flip-tools">
+      <div class="hint">Tipp: Erst vorne lesen, dann raten, dann umdrehen und prüfen.</div>
+      <button class="btn-big" id="flipAll" type="button">Alle umdrehen</button>
+      <button class="btn-big alt" id="flipNone" type="button">Alle zurück</button>
+    </div>
+
+    <div id="kartenMount"></div>
+
+    <div class="rule-box" style="margin-top:28px;">
+      <b>Und y und en?</b> Die beiden findest du im Tab <b>Zwei Pronomen</b>. Dort lernst du auch, in welcher Reihenfolge Pronomen stehen, wenn mehrere in einem Satz vorkommen.
+    </div>
+  </section>
+
+  <!-- ===================== SPICKZETTEL ===================== -->
+  <section class="panel" id="spick">
+    <h2 class="section-head">Der Spickzettel</h2>
+    <p class="section-lead">Alles zum Nachschlagen auf einer Seite. Du kannst ihn auch ausdrucken.</p>
+    <div class="flip-tools">
+      <div class="hint">Beim Ausdrucken wird nur der Spickzettel gedruckt.</div>
+      <button class="btn-big alt" id="printSpick" type="button">Spickzettel drucken</button>
+    </div>
+
+    <div class="print-area">
+      <div class="card">
+        <h3 class="sheet-title">Personalpronomen</h3>
+        <div class="matrix-wrap">
+          <table class="matrix">
+            <tr><th></th><th>je</th><th>tu</th><th>il</th><th>elle</th><th>nous</th><th>vous</th><th>ils</th><th>elles</th></tr>
+            <tr class="r-sujet"><td class="rowlabel">Sujet<small>wer?</small></td><td>je (j')</td><td>tu</td><td>il</td><td>elle</td><td>nous</td><td>vous</td><td>ils</td><td>elles</td></tr>
+            <tr class="r-cod"><td class="rowlabel">COD<small>wen / was?</small></td><td>me (m')</td><td>te (t')</td><td>le (l')</td><td>la (l')</td><td>nous</td><td>vous</td><td>les</td><td>les</td></tr>
+            <tr class="r-coi"><td class="rowlabel">COI<small>wem?</small></td><td>me (m')</td><td>te (t')</td><td>lui</td><td>lui</td><td>nous</td><td>vous</td><td>leur</td><td>leur</td></tr>
+            <tr class="r-refl"><td class="rowlabel">Réfléchi<small>sich</small></td><td>me (m')</td><td>te (t')</td><td>se (s')</td><td>se (s')</td><td>nous</td><td>vous</td><td>se (s')</td><td>se (s')</td></tr>
+            <tr class="r-ton"><td class="rowlabel">Tonique<small>betont</small></td><td>moi</td><td>toi</td><td>lui</td><td>elle</td><td>nous</td><td>vous</td><td>eux</td><td>elles</td></tr>
+          </table>
+        </div>
+        <p class="matrix-note">COD = direktes Objekt (ohne Präposition) · COI = indirektes Objekt (mit <i>à</i>)</p>
+      </div>
+
+      <div class="sheet-grid" style="margin-bottom:22px;">
+        <div class="card">
+          <h3 class="sheet-title">Possessivbegleiter</h3>
+          <table class="mini">
+            <tr><th></th><th>m. Sg.</th><th>f. Sg.</th><th>Plural</th></tr>
+            <tr><td>mein</td><td>mon</td><td>ma</td><td>mes</td></tr>
+            <tr><td>dein</td><td>ton</td><td>ta</td><td>tes</td></tr>
+            <tr><td>sein / ihr</td><td>son</td><td>sa</td><td>ses</td></tr>
+            <tr><td>unser</td><td>notre</td><td>notre</td><td>nos</td></tr>
+            <tr><td>euer / Ihr</td><td>votre</td><td>votre</td><td>vos</td></tr>
+            <tr><td>ihr (Pl.)</td><td>leur</td><td>leur</td><td>leurs</td></tr>
+          </table>
+          <p class="matrix-note">Er richtet sich nach dem Nomen, nicht nach dem Besitzer. Vor Vokal: <i>mon amie</i>.</p>
+        </div>
+        <div class="card">
+          <h3 class="sheet-title">Demonstrativ</h3>
+          <table class="mini">
+            <tr><th></th><th>m.</th><th>f.</th><th>Plural</th></tr>
+            <tr><td>Begleiter</td><td>ce (cet)</td><td>cette</td><td>ces</td></tr>
+            <tr><td>Pronomen</td><td>celui</td><td>celle</td><td>ceux / celles</td></tr>
+          </table>
+          <p class="matrix-note"><i>cet</i> steht vor Vokal und stummem h: <i>cet homme</i>. Das Pronomen braucht <i>-ci</i>, <i>-là</i>, <i>de</i> oder <i>qui / que</i>.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="sheet-title">Possessivpronomen</h3>
+        <div class="matrix-wrap">
+          <table class="matrix poss small">
+            <tr><th></th><th>m. Sg.</th><th>f. Sg.</th><th>m. Pl.</th><th>f. Pl.</th></tr>
+            <tr class="r-poss"><td class="rowlabel">meiner</td><td>le mien</td><td>la mienne</td><td>les miens</td><td>les miennes</td></tr>
+            <tr class="r-poss"><td class="rowlabel">deiner</td><td>le tien</td><td>la tienne</td><td>les tiens</td><td>les tiennes</td></tr>
+            <tr class="r-poss"><td class="rowlabel">seiner / ihrer</td><td>le sien</td><td>la sienne</td><td>les siens</td><td>les siennes</td></tr>
+            <tr class="r-poss"><td class="rowlabel">unserer</td><td>le nôtre</td><td>la nôtre</td><td>les nôtres</td><td>les nôtres</td></tr>
+            <tr class="r-poss"><td class="rowlabel">eurer</td><td>le vôtre</td><td>la vôtre</td><td>les vôtres</td><td>les vôtres</td></tr>
+            <tr class="r-poss"><td class="rowlabel">ihrer (Pl.)</td><td>le leur</td><td>la leur</td><td>les leurs</td><td>les leurs</td></tr>
+          </table>
+        </div>
+        <p class="matrix-note">Immer mit Artikel. Mit <i>à</i> und <i>de</i> verschmilzt er: <i>au mien, du mien, aux miens, des miens</i>.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="sheet-title">Welches Pronomen nehme ich?</h3>
+        <ul class="rules-list">
+          <li>Wer macht etwas? → <b>Sujet</b>: je, tu, il, elle, on, nous, vous, ils, elles</li>
+          <li>Nach Präposition, nach c'est, zur Betonung oder als Einwort-Antwort → <b>Tonique</b>: moi, toi, lui, elle, nous, vous, eux, elles</li>
+          <li>Wen oder was, ohne à oder de davor? → <b>COD</b>: me, te, le, la, nous, vous, les</li>
+          <li>Wem, also à + Person? → <b>COI</b>: me, te, lui, nous, vous, leur</li>
+          <li>Die Handlung geht auf das Subjekt zurück? → <b>Réfléchi</b>: me, te, se, nous, vous, se</li>
+          <li>Wem gehört es? Mit Nomen → <b>mon, ma, mes …</b> · Ohne Nomen → <b>le mien …</b></li>
+          <li>Dieser, diese, dieses? Mit Nomen → <b>ce, cet, cette, ces</b> · Ohne Nomen → <b>celui, celle …</b></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="sheet-title">Wo steht das Pronomen?</h3>
+        <ul class="rules-list">
+          <li>Normal: direkt <b>vor</b> dem Verb → Je le vois.</li>
+          <li>Verneint: ne + Pronomen + Verb + pas → Je ne le vois pas.</li>
+          <li>Passé composé: vor dem Hilfsverb → Je l'ai vu.</li>
+          <li>Verb + Infinitiv: vor dem Infinitiv → Je veux le voir.</li>
+          <li>Imperativ bejaht: <b>hinter</b> dem Verb, mit Bindestrich → Regarde-le !</li>
+          <li>Zwei Pronomen, immer in dieser Reihenfolge: me / te / se / nous / vous → le / la / les → lui / leur → y → en</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ÜBEN ===================== -->
+  <section class="panel" id="uebung">
+    <h2 class="section-head">Üben, Gruppe für Gruppe</h2>
+    <p class="section-lead">Jede Pronomen-Gruppe hat ihre eigene Übung. Such dir die aus, bei der du noch unsicher bist. Es gibt Auswahl-Aufgaben und Aufgaben zum Eintippen.</p>
+
+    <div class="subnav-group">
+      <div class="subnav">
+        <button class="subnav-btn active c-a" data-target="u-personal" type="button">Personalpronomen</button>
+        <button class="subnav-btn c-b" data-target="u-objekt" type="button">Objektpronomen</button>
+        <button class="subnav-btn c-c" data-target="u-reflexiv" type="button">Reflexiv</button>
+        <button class="subnav-btn c-reg" data-target="u-possessiv" type="button">Possessiv</button>
+        <button class="subnav-btn c-irr" data-target="u-demonstrativ" type="button">Demonstrativ</button>
+      </div>
+
+      <div class="subpanel active" id="u-personal">
+        <div class="rule-box" style="margin-top:0;"><b>Das übst du:</b> Wann steht <i>je, tu, il …</i> (Subjekt) und wann <i>moi, toi, lui …</i> (betont)?</div>
+        <div class="quiz" data-set="personal"></div>
+      </div>
+      <div class="subpanel" id="u-objekt">
+        <div class="rule-box" style="margin-top:0;"><b>Das übst du:</b> Direktes Objekt (<i>le, la, les</i>) oder indirektes Objekt (<i>lui, leur</i>)? Achtung bei Verben, die im Deutschen anders funktionieren.</div>
+        <div class="quiz" data-set="objekt"></div>
+      </div>
+      <div class="subpanel" id="u-reflexiv">
+        <div class="rule-box" style="margin-top:0;"><b>Das übst du:</b> Das Reflexivpronomen passt zum Subjekt, vor Vokal mit Apostroph.</div>
+        <div class="quiz" data-set="reflexiv"></div>
+      </div>
+      <div class="subpanel" id="u-possessiv">
+        <div class="rule-box" style="margin-top:0;"><b>Das übst du:</b> <i>mon, ma, mes …</i> mit Nomen und <i>le mien …</i> ohne Nomen.</div>
+        <div class="quiz" data-set="possessiv"></div>
+      </div>
+      <div class="subpanel" id="u-demonstrativ">
+        <div class="rule-box" style="margin-top:0;"><b>Das übst du:</b> <i>ce, cet, cette, ces</i> und <i>celui, celle …</i></div>
+        <div class="quiz" data-set="demonstrativ"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STELLUNG ===================== -->
+  <section class="panel" id="stellung">
+    <h2 class="section-head">Wo stehen die Pronomen im Satz?</h2>
+    <p class="section-lead">Meistens klebt das Pronomen direkt vor dem Verb. Aber es gibt Ausnahmen.</p>
+
+    <div class="subnav-group">
+      <div class="subnav">
+        <button class="subnav-btn active c-a" data-target="st-labor" type="button">Das Satzlabor</button>
+        <button class="subnav-btn c-b" data-target="st-ueben" type="button">Üben</button>
+      </div>
+
+      <div class="subpanel active" id="st-labor">
+        <div class="rule-box" style="margin-top:0;">
+          <b>Faustregel:</b> Das Pronomen steht <b>vor dem Verb</b>, zu dem es inhaltlich gehört. Nur beim <b>bejahten Imperativ</b> steht es <b>dahinter</b>.
+        </div>
+        <div class="card">
+          <h3>Wähle eine Situation <span class="tag">klick!</span></h3>
+          <div class="scn-nav" id="scnNav"></div>
+          <div id="scnView"></div>
+        </div>
+      </div>
+
+      <div class="subpanel" id="st-ueben">
+        <div class="quiz" data-set="stellung"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ZWEI PRONOMEN ===================== -->
+  <section class="panel" id="zwei">
+    <h2 class="section-head">Zwei Pronomen in einem Satz</h2>
+    <p class="section-lead">Mit y und en wird es erst richtig spannend. Hier lernst du die Reihenfolge.</p>
+
+    <div class="subnav-group">
+      <div class="subnav">
+        <button class="subnav-btn active c-a" data-target="z-zug" type="button">Der Zug</button>
+        <button class="subnav-btn c-b" data-target="z-yen" type="button">y und en</button>
+        <button class="subnav-btn c-c" data-target="z-ueben" type="button">Üben</button>
+      </div>
+
+      <div class="subpanel active" id="z-zug">
+        <div class="card">
+          <h3>Der Pronomen-Zug 🚂 <span class="tag">Reihenfolge</span></h3>
+          <p style="margin-top:0;color:var(--ink-soft);">Stehen zwei Pronomen vor dem Verb, gilt immer diese Reihenfolge, wie bei den Wagen eines Zuges:</p>
+          <div class="train">
+            <div class="wagon w1"><div class="no">1</div><div class="forms">me · te · se<br>nous · vous</div><div class="desc">ich, du, sich, wir, ihr</div></div>
+            <div class="wagon w2"><div class="no">2</div><div class="forms">le · la · les</div><div class="desc">direktes Objekt</div></div>
+            <div class="wagon w3"><div class="no">3</div><div class="forms">lui · leur</div><div class="desc">indirektes Objekt</div></div>
+            <div class="wagon w4"><div class="no">4</div><div class="forms">y</div><div class="desc">dort / daran</div></div>
+            <div class="wagon w5"><div class="no">5</div><div class="forms">en</div><div class="desc">davon</div></div>
+            <div class="engine"><span>🚂</span>VERB</div>
+          </div>
+          <div class="rule-box" style="margin:14px 0 0;"><b>Merke:</b> Wagen 1 und Wagen 3 fahren nie zusammen. <i>me lui</i> oder <i>nous leur</i> gibt es nicht.</div>
+        </div>
+
+        <div class="cat-grid">
+          <div class="cat-card cat-4">
+            <span class="num">BEISPIELE</span>
+            <h4>Zwei Pronomen im Satz</h4>
+            <div class="example"><span class="fr">Il <u>me</u> <u>le</u> donne.</span><span class="de">Er gibt es mir. (1 + 2)</span></div>
+            <div class="example"><span class="fr">Je <u>le</u> <u>lui</u> dis.</span><span class="de">Ich sage es ihm. (2 + 3)</span></div>
+            <div class="example"><span class="fr">Elle <u>m'</u><u>en</u> parle.</span><span class="de">Sie erzählt mir davon. (1 + 5)</span></div>
+            <div class="example"><span class="fr">Il <u>y</u> <u>en</u> a trois.</span><span class="de">Es gibt drei davon. (4 + 5)</span></div>
+            <div class="example"><span class="fr">Je ne <u>le</u> <u>lui</u> dis pas.</span><span class="de">Ich sage es ihm nicht.</span></div>
+          </div>
+          <div class="cat-card cat-6">
+            <span class="num">IMPERATIV BEJAHT</span>
+            <h4>Zwei Pronomen hinter dem Verb</h4>
+            <p class="note" style="margin-top:0;">Erst das <b>direkte</b> Objekt (le, la, les), dann das <b>indirekte</b> (moi, toi, lui, nous, vous, leur), mit Bindestrichen.</p>
+            <div class="example" style="margin-top:10px;"><span class="fr">Donne<u>-le-moi</u> !</span><span class="de">Gib ihn mir!</span></div>
+            <div class="example"><span class="fr">Donne<u>-le-lui</u> !</span><span class="de">Gib ihn ihm!</span></div>
+            <div class="example"><span class="fr">Donne<u>-m'en</u> !</span><span class="de">Gib mir davon!</span></div>
+            <p class="note"><b>Verneint</b> gilt wieder der Zug: Ne <u>me</u> <u>le</u> donne pas !</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="subpanel" id="z-yen">
+        <div class="cat-grid">
+          <div class="cat-card cat-5">
+            <span class="num">Y · DORT / DARAN</span>
+            <h4>y</h4>
+            <p class="note" style="margin-top:0;">ersetzt <b>à + Sache</b> oder eine <b>Ortsangabe</b> (à, dans, chez + Ort).</p>
+            <div class="example" style="margin-top:10px;"><span class="fr">Je vais à Paris. → J'<u>y</u> vais.</span><span class="de">Ich fahre dorthin.</span></div>
+            <div class="example"><span class="fr">Il pense à son examen. → Il <u>y</u> pense.</span><span class="de">Er denkt daran.</span></div>
+            <p class="note"><b>Achtung:</b> Bei Personen steht nach <i>penser à</i> à + betontes Pronomen: Je pense à Paul. → Je pense à <u>lui</u>.</p>
+          </div>
+          <div class="cat-card cat-2">
+            <span class="num">EN · DAVON</span>
+            <h4>en</h4>
+            <p class="note" style="margin-top:0;">ersetzt <b>de + Sache</b> und <b>Mengen</b> (du, de la, des, Zahlen, beaucoup de …).</p>
+            <div class="example" style="margin-top:10px;"><span class="fr">Il parle de son voyage. → Il <u>en</u> parle.</span><span class="de">Er spricht davon.</span></div>
+            <div class="example"><span class="fr">Je prends du pain. → J'<u>en</u> prends.</span><span class="de">Ich nehme davon.</span></div>
+            <div class="example"><span class="fr">J'ai trois frères. → J'<u>en</u> ai trois.</span><span class="de">Ich habe drei davon.</span></div>
+            <p class="note"><b>Merke:</b> Zahlen und Mengen bleiben stehen: J'en ai <b>trois</b>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="subpanel" id="z-ueben">
+        <div class="quiz" data-set="zwei"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">10ab Horlacher</footer>
+</div>
+
+<script src="engine.js"></script>
+<script>
+
+// ===================== MERK-KARTEN =====================
+const P = (label, form) => `<div class="pr"><small>${label}</small><b>${form}</b></div>`;
+const TRICK = (tag, text) => `<div class="trick"><b>${tag}</b>${text}</div>`;
+
+const CARDS = {
+  sujet: { cls:'k-sujet', badge:'MUSS SITZEN',
+    title:'Wer macht’s?', name:'SUJET · Subjektpronomen',
+    wozu:'Sagt, <u>wer</u> etwas tut. Steht fast immer direkt vor dem Verb.',
+    trick:['MERKE','on = man, umgangssprachlich auch „wir“. Das Verb bleibt trotzdem Singular: on joue.'],
+    fr:'Elle chante bien.', de:'Sie singt gut.',
+    back:`<div class="bhead">Subjekt</div>
+      <div class="pairs three">${P('ich','je (j’)')}${P('du','tu')}${P('er','il')}${P('sie','elle')}${P('man / wir','on')}${P('wir','nous')}${P('ihr / Sie','vous')}${P('sie (m.)','ils')}${P('sie (f.)','elles')}</div>
+      ${TRICK('VOR VOKAL','je wird j’: j’aime, j’habite, j’ai')}` },
+  ton: { cls:'k-ton', badge:'MUSS SITZEN',
+    title:'Die Betonten', name:'TONIQUE · betontes Pronomen',
+    wozu:'Brauchst du immer dann, wenn <u>kein Verb direkt dahinter</u> hängt: nach Präposition, nach c’est, zur Betonung und als kurze Antwort.',
+    trick:['MERKE','Nach avec, pour, chez, sans … steht moi, toi, lui, eux …'],
+    fr:'Tu viens avec moi ? · C’est lui !', de:'Kommst du mit mir? · Er ist es!',
+    back:`<div class="bhead">Betont</div>
+      <div class="pairs">${P('ich','moi')}${P('du','toi')}${P('er','lui')}${P('sie','elle')}${P('wir','nous')}${P('ihr / Sie','vous')}${P('sie (m. / gemischt)','eux')}${P('sie (f.)','elles')}</div>
+      ${TRICK('AUCH SO','Zur Betonung: Moi, je préfère le thé. · Und als Antwort: Qui ? — Moi !')}` },
+  cod: { cls:'k-cod', badge:'MUSS SITZEN',
+    title:'Wen oder was?', name:'COD · direktes Objekt',
+    wozu:'Ersetzt ein Objekt <u>ohne Präposition</u>: den, die, das, was du direkt siehst, nimmst, kennst.',
+    trick:['FRAGE','Wen oder was? Steht kein à und kein de davor, nimmst du le, la oder les.'],
+    fr:'Je vois Paul. → Je le vois.', de:'Ich sehe ihn.',
+    back:`<div class="bhead">Direktes Objekt</div>
+      <div class="pairs">${P('mich','me (m’)')}${P('dich','te (t’)')}${P('ihn / es','le (l’)')}${P('sie (f.)','la (l’)')}${P('uns','nous')}${P('euch / Sie','vous')}${P('sie (Pl.)','les')}</div>
+      ${TRICK('VOR VOKAL','le und la werden zu l’: Je l’aime. Je l’ai vu.')}` },
+  coi: { cls:'k-coi', badge:'MUSS SITZEN',
+    title:'Wem?', name:'COI · indirektes Objekt',
+    wozu:'Ersetzt <u>à + Person</u>: jemandem etwas sagen, geben, schreiben, schenken, erklären.',
+    trick:['MERKE','lui heißt „ihm“ und „ihr“. leur heißt „ihnen“ und hat nie ein -s.'],
+    fr:'Je parle à Marie. → Je lui parle.', de:'Ich spreche mit ihr.',
+    back:`<div class="bhead">Indirektes Objekt</div>
+      <div class="pairs">${P('mir','me (m’)')}${P('dir','te (t’)')}${P('ihm / ihr','lui')}${P('uns','nous')}${P('euch / Ihnen','vous')}${P('ihnen','leur')}</div>
+      ${TRICK('FALLE','aider, écouter, remercier, attendre + Person sind im Französischen direkt: Je l’aide. (nicht: lui)')}
+      ${TRICK('AUSNAHME','penser à, faire attention à, s’intéresser à + Person → à lui, à elle, à eux')}` },
+  refl: { cls:'k-refl', badge:'MUSS SITZEN',
+    title:'Auf sich selbst', name:'RÉFLÉCHI · Reflexivpronomen',
+    wozu:'Die Handlung geht auf das Subjekt zurück: sich waschen, aufstehen, sich beeilen, heißen.',
+    trick:['MERKE','Das Pronomen passt immer zum Subjekt: je → me, tu → te, nous → nous.'],
+    fr:'Je me lève. · Ils se dépêchent.', de:'Ich stehe auf. · Sie beeilen sich.',
+    back:`<div class="bhead">Reflexiv</div>
+      <div class="pairs">${P('ich','me (m’)')}${P('du','te (t’)')}${P('er / sie / es','se (s’)')}${P('wir','nous')}${P('ihr / Sie','vous')}${P('sie (Pl.)','se (s’)')}</div>
+      ${TRICK('VERBEN','se lever, se laver, se dépêcher, s’appeler, s’habiller, se coucher')}
+      ${TRICK('VOR VOKAL','Je m’appelle … · Elle s’habille.')}` },
+  pb: { cls:'k-pb', badge:'MUSS SITZEN',
+    title:'Wem gehört’s?', name:'POSSESSIFS · Possessivbegleiter',
+    wozu:'Steht <u>vor einem Nomen</u> und zeigt, wem etwas gehört: mein Bruder, deine Tasche.',
+    trick:['MERKE','Er richtet sich nach dem Nomen, nicht nach dem Besitzer. son livre = sein oder ihr Buch.'],
+    fr:'C’est mon frère. · ma sœur · mes parents', de:'Das ist mein Bruder. · meine Schwester · meine Eltern',
+    back:`<div class="bhead">Besitz</div>
+      <table class="mini"><tr><th></th><th>m. Sg.</th><th>f. Sg.</th><th>Plural</th></tr>
+        <tr><td>mein</td><td>mon</td><td>ma</td><td>mes</td></tr>
+        <tr><td>dein</td><td>ton</td><td>ta</td><td>tes</td></tr>
+        <tr><td>sein / ihr</td><td>son</td><td>sa</td><td>ses</td></tr>
+        <tr><td>unser</td><td>notre</td><td>notre</td><td>nos</td></tr>
+        <tr><td>euer / Ihr</td><td>votre</td><td>votre</td><td>vos</td></tr>
+        <tr><td>ihr (Pl.)</td><td>leur</td><td>leur</td><td>leurs</td></tr></table>
+      ${TRICK('VOR VOKAL','mon amie, ton école, son histoire (statt ma, ta, sa)')}` },
+  pp: { cls:'k-pp', badge:'FÜR PROFIS', pro:true,
+    title:'Meiner, deiner …', name:'POSSESSIFS · Possessivpronomen',
+    wozu:'Ersetzt <u>Begleiter + Nomen</u>, damit du dich nicht wiederholst: mein Buch → meins.',
+    trick:['MERKE','Immer mit Artikel: le mien, la mienne, les miens, les miennes.'],
+    fr:'Ton sac est rouge, le mien est bleu.', de:'Deine Tasche ist rot, meine ist blau.',
+    back:`<div class="bhead">Possessivpronomen</div>
+      <div class="rows">
+        <div class="prow"><small>meiner</small><span>le mien</span><span>la mienne</span><span>les miens</span><span>les miennes</span></div>
+        <div class="prow"><small>deiner</small><span>le tien</span><span>la tienne</span><span>les tiens</span><span>les tiennes</span></div>
+        <div class="prow"><small>seiner / ihrer</small><span>le sien</span><span>la sienne</span><span>les siens</span><span>les siennes</span></div>
+        <div class="prow"><small>unserer</small><span>le nôtre</span><span>la nôtre</span><span>les nôtres</span></div>
+        <div class="prow"><small>eurer</small><span>le vôtre</span><span>la vôtre</span><span>les vôtres</span></div>
+        <div class="prow"><small>ihrer (Pl.)</small><span>le leur</span><span>la leur</span><span>les leurs</span></div>
+      </div>
+      ${TRICK('MIT à / de','au mien, du mien, aux miens, des miens')}` },
+  dm: { cls:'k-dm', badge:'MUSS SITZEN',
+    title:'Dieser, diese …', name:'DÉMONSTRATIFS · Begleiter und Pronomen',
+    wozu:'Zeigt auf etwas Bestimmtes: ce livre = dieses Buch. Ohne Nomen: celui-ci = dieser hier.',
+    trick:['MERKE','ce wird zu cet vor Vokal und stummem h: cet homme, cet arbre.'],
+    fr:'Ce livre est super. · Quel pull ? — Celui-ci.', de:'Dieses Buch ist super. · Welcher Pulli? – Dieser hier.',
+    back:`<div class="bhead">Mit Nomen</div>
+      <div class="pairs">${P('m.','ce livre')}${P('m., Vokal / h','cet homme')}${P('f.','cette fille')}${P('Plural','ces amis')}</div>
+      <div class="bsub">Ohne Nomen (für Profis)</div>
+      <div class="pairs">${P('m.','celui')}${P('f.','celle')}${P('m. Pl.','ceux')}${P('f. Pl.','celles')}</div>
+      ${TRICK('MERKE','celui, celle … brauchen -ci, -là, de oder qui / que: celui de Paul, celle que j’aime')}` }
+};
+
+const GROUPS = [
+  { head:'Personalpronomen', sub:'Subjekt und betont', ids:['sujet','ton'] },
+  { head:'Objektpronomen', sub:'wen? und wem?', ids:['cod','coi'] },
+  { head:'Reflexivpronomen', sub:'sich', ids:['refl'] },
+  { head:'Possessiv', sub:'wem gehört’s?', ids:['pb','pp'] },
+  { head:'Demonstrativ', sub:'dieser, diese, dieses', ids:['dm'] }
+];
+
+function cardHTML(c){
+  return `<div class="flip ${c.cls}" tabindex="0" role="button" aria-pressed="false">
+    <div class="face front">
+      <span class="badge${c.pro?' pro':''}">${c.badge}</span>
+      <h4 class="ftitle">${c.title}</h4>
+      <div class="fname">${c.name}</div>
+      <p class="wozu">${c.wozu}</p>
+      <div class="trick"><b>${c.trick[0]}</b>${c.trick[1]}</div>
+      <div class="fex"><span class="fr">${c.fr}</span><span class="de">${c.de}</span></div>
+      <div class="tap">Tippen zum Umdrehen ›</div>
+    </div>
+    <div class="face back">
+      ${c.back}
+      <div class="tap">‹ Tippen zum Zurückdrehen</div>
+    </div>
+  </div>`;
+}
+document.getElementById('kartenMount').innerHTML = GROUPS.map(g =>
+  `<h3 class="grp-head">${g.head} <small>${g.sub}</small></h3>
+   <div class="flip-grid">${g.ids.map(id=>cardHTML(CARDS[id])).join('')}</div>`
+).join('');
+
+function toggleFlip(el, force){
+  const open = force===undefined ? !el.classList.contains('open') : force;
+  el.classList.toggle('open', open);
+  el.setAttribute('aria-pressed', open ? 'true' : 'false');
+}
+document.querySelectorAll('.flip').forEach(el=>{
+  el.addEventListener('click', ()=>toggleFlip(el));
+  el.addEventListener('keydown', e=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); toggleFlip(el); } });
+});
+document.getElementById('flipAll').addEventListener('click', ()=>document.querySelectorAll('.flip').forEach(el=>toggleFlip(el,true)));
+document.getElementById('flipNone').addEventListener('click', ()=>document.querySelectorAll('.flip').forEach(el=>toggleFlip(el,false)));
+
+// ===== Spickzettel drucken =====
+document.getElementById('printSpick').addEventListener('click', ()=>{
+  document.body.classList.add('printing-spick');
+  const done = ()=>{ document.body.classList.remove('printing-spick'); window.removeEventListener('afterprint', done); };
+  window.addEventListener('afterprint', done);
+  window.print();
+});
+
+// ===================== SATZLABOR =====================
+const scenarios = [
+  { label:'Präsens', before:"Je regarde <u>le film</u>.", after:"Je <b class='pron'>le</b> regarde.",
+    rule:"Das Pronomen steht <b>direkt vor dem konjugierten Verb</b>." },
+  { label:'Verneinung', before:"Je ne regarde pas <u>le film</u>.", after:"Je ne <b class='pron'>le</b> regarde pas.",
+    rule:"Das Pronomen steht <b>zwischen ne und dem Verb</b>: ne + Pronomen + Verb + pas." },
+  { label:'Passé composé', before:"J'ai pris <u>le bus</u>.", after:"Je <b class='pron'>l'</b>ai pris.",
+    rule:"Das Pronomen steht <b>vor dem Hilfsverb</b> (avoir oder être), nicht vor dem participe passé.<small>Merke: Ein direktes Objekt <i>vor</i> dem Verb löst die Angleichung des participe passé aus: J'ai vu Marie. → Je l'ai <b>vue</b>.</small>" },
+  { label:'Passé composé verneint', before:"Je n'ai pas pris <u>le bus</u>.", after:"Je ne <b class='pron'>l'</b>ai pas pris.",
+    rule:"ne + Pronomen + Hilfsverb + pas + participe passé." },
+  { label:'Verb + Infinitiv', before:"Je veux voir <u>ce film</u>.", after:"Je veux <b class='pron'>le</b> voir.",
+    rule:"Das Pronomen steht <b>direkt vor dem Infinitiv</b>, zu dem es gehört. Das gilt auch beim futur proche: Je vais <b>le</b> voir." },
+  { label:'Imperativ bejaht', before:"Regarde <u>ce film</u> !", after:"Regarde<b class='pron'>-le</b> !",
+    rule:"Im bejahten Imperativ steht das Pronomen <b>hinter dem Verb</b>, verbunden mit Bindestrich.<small>me und te werden dabei zu <b>moi</b> und <b>toi</b>: Écoute-moi !</small>" },
+  { label:'Imperativ verneint', before:"Ne regarde pas <u>ce film</u> !", after:"Ne <b class='pron'>le</b> regarde pas !",
+    rule:"Beim verneinten Imperativ ist alles wieder normal: Das Pronomen steht <b>vor dem Verb</b>." }
+];
+const scnNav = document.getElementById('scnNav');
+const scnView = document.getElementById('scnView');
+function showScenario(i){
+  const s = scenarios[i];
+  scnNav.querySelectorAll('.scn-btn').forEach((b,idx)=>b.classList.toggle('active', idx===i));
+  scnView.innerHTML = `
+    <div class="scn-row">
+      <div class="scn-box"><small>OHNE PRONOMEN</small>${s.before}</div>
+      <div class="scn-arrow">➜</div>
+      <div class="scn-box after"><small>MIT PRONOMEN</small>${s.after}</div>
+    </div>
+    <div class="rule-box" style="margin-bottom:0;">${s.rule}</div>`;
+}
+scenarios.forEach((s,i)=>{
+  const b = document.createElement('button');
+  b.className = 'scn-btn'; b.type = 'button'; b.textContent = s.label;
+  b.addEventListener('click', ()=>showScenario(i));
+  scnNav.appendChild(b);
+});
+showScenario(0);
+
+
+// ===================== ÜBUNGSSÄTZE =====================
+const SETS = {
+  personal: [
+    { t:'mc', q:"______ , je préfère le thé. <i>(Ich – betont)</i>", o:["Je","Moi","Me"], c:1, e:"Zur Betonung am Satzanfang steht das betonte Pronomen: Moi, je préfère le thé." },
+    { t:'mc', q:"Tu viens avec ______ ? <i>(mit mir)</i>", o:["je","me","moi"], c:2, e:"Nach einer Präposition (avec) steht das betonte Pronomen: moi." },
+    { t:'mc', q:"Qui a fait ça ? — C'est ______ ! <i>(er)</i>", o:["il","lui","le"], c:1, e:"Nach c'est steht das betonte Pronomen: c'est lui." },
+    { t:'mc', q:"Paul et Marc ? ______ jouent au foot. <i>(sie)</i>", o:["Ils","Eux","Les"], c:0, e:"Hier ist es das Subjekt vor dem Verb, also ils." },
+    { t:'mc', q:"Elle est plus grande que ______ . <i>(als ich)</i>", o:["je","moi","me"], c:1, e:"Nach que im Vergleich steht das betonte Pronomen: que moi." },
+    { t:'fill', q:"Mes parents ? Je vais chez ______ ce week-end. <i>(zu ihnen)</i>", a:["eux"], e:"Nach einer Präposition (chez), männlich oder gemischt im Plural: eux." },
+    { t:'fill', q:"Marie et Léa ? ______ habitent à Dresde. <i>(sie)</i>", a:["elles"], e:"Subjekt, weiblich Plural: elles." },
+    { t:'fill', q:"Qui veut du gâteau ? — ______ ! <i>(Ich!)</i>", a:["moi"], e:"Als allein stehende Antwort steht das betonte Pronomen: Moi !" }
+  ],
+  objekt: [
+    { t:'mc', q:"Je vois <u>Paul</u>. → Je ______ vois.", o:["le","lui","y"], c:0, e:"Paul ist direktes Objekt (Wen sehe ich?), also le." },
+    { t:'mc', q:"Elle parle <u>à sa mère</u>. → Elle ______ parle.", o:["la","lui","en"], c:1, e:"parler à qn ist ein indirektes Objekt (Wem?), also lui." },
+    { t:'mc', q:"Je téléphone <u>à mes amis</u>. → Je ______ téléphone.", o:["les","leur","eux"], c:1, e:"téléphoner à qn, Plural: leur (nie mit -s)." },
+    { t:'mc', q:"Il regarde <u>les photos</u>. → Il ______ regarde.", o:["les","leur","lui"], c:0, e:"les photos ist direktes Objekt (kein à davor), also les." },
+    { t:'mc', q:"Tu aides <u>ta sœur</u> ? → Tu ______ aides ?", o:["l'","lui","la"], c:0, e:"Falle! Im Deutschen „helfen + Dativ“, im Französischen ist aider qn direkt: tu l'aides. Vor Vokal wird la zu l'." },
+    { t:'fill', q:"Il donne un cadeau <u>à ses parents</u>. → Il ______ donne un cadeau.", a:["leur"], e:"à + Personen im Plural: leur." },
+    { t:'fill', q:"J'écoute <u>mes profs</u>. → Je ______ écoute.", a:["les"], e:"écouter qn ist direkt (kein à): les." },
+    { t:'fill', q:"Tu connais <u>Marie</u> ? → Tu ______ connais ?", a:["la"], e:"Marie ist direktes Objekt und weiblich: la." }
+  ],
+  reflexiv: [
+    { t:'mc', q:"Je ______ lève à sept heures.", o:["me","se","te"], c:0, e:"Subjekt je, also me. Das Pronomen passt immer zum Subjekt." },
+    { t:'mc', q:"Elle ______ appelle Léa.", o:["se","s'","me"], c:1, e:"Vor Vokal wird se zu s': elle s'appelle." },
+    { t:'mc', q:"Nous ______ dépêchons.", o:["nous","se","vous"], c:0, e:"Bei nous und vous bleibt das Reflexivpronomen gleich: nous nous dépêchons." },
+    { t:'mc', q:"Tu ______ couches tôt ?", o:["te","t'","se"], c:0, e:"couches beginnt mit Konsonant, also te ohne Apostroph." },
+    { t:'mc', q:"Les enfants ______ amusent.", o:["se","s'","les"], c:1, e:"amusent beginnt mit Vokal, also s'amusent." },
+    { t:'fill', q:"Vous ______ dépêchez ?", a:["vous"], e:"vous bleibt vous: vous vous dépêchez." },
+    { t:'fill', q:"Je ______ habille.", a:["m'"], e:"habille beginnt mit stummem h, also m': je m'habille." },
+    { t:'fill', q:"Mon frère ______ lave les mains.", a:["se"], e:"il oder mon frère: se (se laver)." }
+  ],
+  possessiv: [
+    { t:'mc', q:"C'est ______ sœur. <i>(meine)</i>", o:["mon","ma","mes"], c:1, e:"sœur ist weiblich Singular: ma." },
+    { t:'mc', q:"Ce sont ______ parents. <i>(meine)</i>", o:["mon","ma","mes"], c:2, e:"parents ist Plural: mes." },
+    { t:'mc', q:"Paul cherche ______ amie. <i>(seine)</i>", o:["son","sa","ses"], c:0, e:"amie ist weiblich, beginnt aber mit Vokal: son statt sa." },
+    { t:'mc', q:"Nous aimons ______ ville. <i>(unsere)</i>", o:["notre","nos","nôtre"], c:0, e:"Singular: notre (Begleiter, ohne Accent). Mit Accent und Artikel wäre es das Pronomen: le nôtre." },
+    { t:'mc', q:"Ton sac est rouge, et ______ ? <i>(meiner)</i>", o:["le mien","mon","le mon"], c:0, e:"Ohne Nomen brauchst du das Possessivpronomen: le mien." },
+    { t:'fill', q:"C'est ma voiture. → C'est la ______ .", a:["mienne"], e:"Possessivpronomen, weiblich Singular: la mienne." },
+    { t:'fill', q:"Ce sont leurs clés ? — Oui, ce sont les ______ . <i>(ihre)</i>", a:["leurs"], e:"Das Pronomen zu leur heißt le leur, la leur, les leurs." },
+    { t:'fill', q:"Tu as tes livres ? Moi, j'ai oublié les ______ . <i>(meine)</i>", a:["miens"], e:"livres ist männlich Plural: les miens." }
+  ],
+  demonstrativ: [
+    { t:'mc', q:"______ livre est super. <i>(dieses)</i>", o:["ce","cet","cette"], c:0, e:"livre ist männlich und beginnt mit Konsonant: ce." },
+    { t:'mc', q:"______ homme est sympa. <i>(dieser)</i>", o:["ce","cet","cette"], c:1, e:"homme beginnt mit stummem h: cet." },
+    { t:'mc', q:"______ fille s'appelle Léa. <i>(dieses Mädchen)</i>", o:["ce","cet","cette"], c:2, e:"fille ist weiblich: cette." },
+    { t:'mc', q:"______ chaussures sont chères. <i>(diese)</i>", o:["ces","ce","cette"], c:0, e:"Plural: ces." },
+    { t:'mc', q:"Quel pull ? — ______-ci. <i>(dieser hier)</i>", o:["Celui","Ce","Cet"], c:0, e:"Ohne Nomen brauchst du das Pronomen celui (mit -ci oder -là)." },
+    { t:'fill', q:"Quelle robe ? — ______-là. <i>(jene dort)</i>", a:["celle"], e:"robe ist weiblich: celle-là." },
+    { t:'fill', q:"Mes notes et ______ de Paul. <i>(die von Paul)</i>", a:["celles"], e:"notes ist weiblich Plural: celles + de." },
+    { t:'fill', q:"J'aime ______ arbre. <i>(diesen Baum)</i>", a:["cet"], e:"arbre beginnt mit Vokal: cet." }
+  ],
+  stellung: [
+    { t:'mc', q:"J'ai pris <u>le bus</u>. → ?", o:["Je l'ai pris.","Je lui ai pris.","J'ai le pris."], c:0, e:"le bus ist direktes Objekt, also l'. Das Pronomen steht vor dem Hilfsverb." },
+    { t:'mc', q:"Je ne regarde pas <u>le film</u>. → ?", o:["Je ne le regarde pas.","Je le ne regarde pas.","Je ne regarde pas le."], c:0, e:"ne + Pronomen + Verb + pas." },
+    { t:'mc', q:"Je veux voir <u>ce film</u>. → ?", o:["Je le veux voir.","Je veux le voir.","Je veux voir le."], c:1, e:"Bei Verb + Infinitiv steht das Pronomen direkt vor dem Infinitiv." },
+    { t:'puz', de:"Ich schaue ihn nicht an.", w:["Je","ne","le","regarde","pas"] },
+    { t:'puz', de:"Wir wollen sie kaufen.", w:["Nous","voulons","les","acheter"] },
+    { t:'puz', de:"Sie hat gestern mit ihm gesprochen.", w:["Elle","lui","a","parlé","hier"] },
+    { t:'fill', q:"Regarde <u>ce film</u> ! → ______ !", a:["regarde-le"], e:"Bejahter Imperativ: Pronomen hinter dem Verb, mit Bindestrich." },
+    { t:'fill', q:"Il va <u>à Lyon</u> demain. → Schreibe den ganzen Satz mit Pronomen.", a:["il y va demain"], e:"à + Ort wird durch y ersetzt: Il y va demain." }
+  ],
+  zwei: [
+    { t:'mc', q:"Il donne <u>le livre</u> <u>à moi</u>. → Il ______ donne.", o:["me le","le me","me lui"], c:0, e:"Reihenfolge im Zug: Wagen 1 (me) vor Wagen 2 (le), also il me le donne." },
+    { t:'mc', q:"Je dis <u>la vérité</u> <u>à Paul</u>. → Je ______ dis.", o:["la lui","lui la","le lui"], c:0, e:"la vérité wird zu la (Wagen 2), à Paul zu lui (Wagen 3): je la lui dis." },
+    { t:'mc', q:"Elle parle <u>de ses vacances</u> <u>à moi</u>. → Elle ______ parle.", o:["m'en","en me","me en"], c:0, e:"me (Wagen 1) vor en (Wagen 5). Vor Vokal wird me zu m': elle m'en parle." },
+    { t:'mc', q:"Il y a <u>trois pommes</u>. → Il ______ a trois.", o:["y en","en y","y les"], c:0, e:"y (Wagen 4) steht vor en (Wagen 5): il y en a trois." },
+    { t:'fill', q:"Je donne <u>ces clés</u> <u>à Julie</u>. → Je ______ donne.", a:["les lui"], e:"ces clés wird zu les (Wagen 2), à Julie zu lui (Wagen 3): je les lui donne." },
+    { t:'fill', q:"Er zeigt uns das Foto. → Il ______ montre.", a:["nous la"], e:"uns wird zu nous (Wagen 1), das Foto zu la (Wagen 2): il nous la montre." },
+    { t:'puz', de:"Er gibt es mir.", w:["Il","me","le","donne"] },
+    { t:'puz', de:"Sie gibt sie ihnen nicht.", w:["Elle","ne","les","leur","donne","pas"] },
+    { t:'puz', de:"Es gibt drei davon.", w:["Il","y","en","a","trois"] }
+  ]
+};
+document.querySelectorAll('.quiz').forEach(el=>mountQuiz(el, SETS[el.dataset.set]));
+</script>
+</body>
+</html>
