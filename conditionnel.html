@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--
+  Original author: Horlacher (10ab)
+  Created: 2026-10-28
+  This material was created for Horlacher's own French class (10ab).
+  Not authorized for redistribution under a different author's name.
+-->
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La phrase conditionnelle — 10ab</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="home-link" href="index.html">← Accueil</a>
+
+  <div class="hero">
+    <div class="bubble">Si j'avais su …</div>
+    <div class="eyebrow">Grammaire · fiche de travail</div>
+    <h1>La phrase conditionnelle</h1>
+    <p>Typ 1 und 2 zum Auffrischen, Typ 3 ganz neu. Dazu Übungen in drei Stufen zum Selbstkontrollieren.</p>
+  </div>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="ueberblick">Überblick</button>
+    <button class="tab-btn" data-tab="revision">Révision</button>
+    <button class="tab-btn" data-tab="typ3">Typ 3 neu</button>
+    <button class="tab-btn" data-tab="spick">Spickzettel</button>
+    <button class="tab-btn" data-tab="uebung">Üben</button>
+  </nav>
+
+  <!-- ===================== ÜBERBLICK ===================== -->
+  <section class="panel active" id="ueberblick">
+    <h2 class="section-head">Drei Typen von Si-Sätzen</h2>
+    <p class="section-lead">Ein Si-Satz besteht aus einer Bedingung (<i>si …</i>) und einer Folge. Der Typ sagt dir, wie wahrscheinlich die Bedingung ist. Tippe auf die Karte, dann siehst du die Bildung.</p>
+
+    <div class="flip-tools">
+      <div class="hint">Tipp: Erst vorne lesen, dann raten, dann umdrehen und prüfen.</div>
+      <button class="btn-big" id="flipAll" type="button">Alle umdrehen</button>
+      <button class="btn-big alt" id="flipNone" type="button">Alle zurück</button>
+    </div>
+
+    <div id="kartenMount"></div>
+
+    <div class="rule-box" style="margin-top:28px;">
+      <b>Die wichtigste Regel:</b> Nach <b>si</b> steht nie ein futur und nie ein conditionnel. Beides steht nur im Hauptsatz.
+    </div>
+  </section>
+
+  <!-- ===================== RÉVISION ===================== -->
+  <section class="panel" id="revision">
+    <h2 class="section-head">Révision</h2>
+    <p class="section-lead">Das kennst du schon. Hier steht noch einmal das Wichtigste auf einen Blick.</p>
+
+    <div class="subnav-group">
+      <div class="subnav">
+        <button class="subnav-btn active c-a" data-target="r-typen" type="button">Typ 1 und Typ 2</button>
+        <button class="subnav-btn c-b" data-target="r-cond" type="button">Le conditionnel présent</button>
+      </div>
+
+      <div class="subpanel active" id="r-typen">
+        <div class="cat-grid">
+          <div class="cat-card cat-4">
+            <span class="num">TYP 1 · REALISTISCH</span>
+            <h4>si + présent → futur simple</h4>
+            <div class="example"><span class="fr">S'il fait beau, nous irons à la plage.</span><span class="de">Wenn das Wetter schön ist, gehen wir an den Strand.</span></div>
+            <div class="example"><span class="fr">Si tu as faim, mange !</span><span class="de">Wenn du Hunger hast, iss! (Imperativ im Hauptsatz)</span></div>
+            <p class="note"><b>Auch möglich:</b> Im Hauptsatz steht manchmal das présent oder der Imperativ.</p>
+          </div>
+          <div class="cat-card cat-6">
+            <span class="num">TYP 2 · UNWAHRSCHEINLICH</span>
+            <h4>si + imparfait → conditionnel présent</h4>
+            <div class="example"><span class="fr">Si j'avais le temps, je viendrais.</span><span class="de">Wenn ich Zeit hätte, würde ich kommen.</span></div>
+            <div class="example"><span class="fr">Nous voyagerions plus si nous avions plus d'argent.</span><span class="de">Wir würden mehr reisen, wenn wir mehr Geld hätten.</span></div>
+            <p class="note"><b>Merke:</b> Der Hauptsatz darf auch zuerst stehen, dann ohne Komma.</p>
+          </div>
+        </div>
+        <div class="rule-box" style="margin-top:20px;">
+          <b>Elision:</b> si + il / ils wird zu <b>s'il / s'ils</b>. Vor elle, on und je bleibt <i>si</i>: si elle, si on, si je.
+        </div>
+      </div>
+
+      <div class="subpanel" id="r-cond">
+        <div class="card">
+          <h3>So bildest du das conditionnel <span class="tag">Stamm + Endung</span></h3>
+          <p style="margin-top:0;color:var(--ink-soft);">Stamm vom <b>futur simple</b> (meist der Infinitiv) + Endungen vom <b>imparfait</b>: <b>-ais, -ais, -ait, -ions, -iez, -aient</b>.</p>
+          <table class="mini">
+            <tr><th></th><th>parler</th><th>finir</th><th>prendre</th></tr>
+            <tr><td>je</td><td>parlerais</td><td>finirais</td><td>prendrais</td></tr>
+            <tr><td>tu</td><td>parlerais</td><td>finirais</td><td>prendrais</td></tr>
+            <tr><td>il / elle / on</td><td>parlerait</td><td>finirait</td><td>prendrait</td></tr>
+            <tr><td>nous</td><td>parlerions</td><td>finirions</td><td>prendrions</td></tr>
+            <tr><td>vous</td><td>parleriez</td><td>finiriez</td><td>prendriez</td></tr>
+            <tr><td>ils / elles</td><td>parleraient</td><td>finiraient</td><td>prendraient</td></tr>
+          </table>
+          <p class="matrix-note">Bei Verben auf -re fällt das <i>e</i> weg: prendre → prendr-ais.</p>
+        </div>
+
+        <div class="card">
+          <h3>Unregelmäßige Stämme <span class="tag">auswendig</span></h3>
+          <div class="pairs three" id="stems"></div>
+          <p class="matrix-note">Die Stämme sind dieselben wie beim futur simple. Die Endungen bleiben immer gleich.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TYP 3 NEU ===================== -->
+  <section class="panel" id="typ3">
+    <h2 class="section-head">Typ 3: Es ist zu spät</h2>
+    <p class="section-lead">Typ 3 spricht über die Vergangenheit: Etwas ist nicht passiert, und man kann es nicht mehr ändern. Im Deutschen sagst du dafür „hätte“ und „wäre“.</p>
+
+    <div class="subnav-group">
+      <div class="subnav">
+        <button class="subnav-btn active c-a" data-target="t-bildung" type="button">Bildung</button>
+        <button class="subnav-btn c-b" data-target="t-labor" type="button">Das Satzlabor</button>
+        <button class="subnav-btn c-c" data-target="t-fallen" type="button">Fallen</button>
+      </div>
+
+      <div class="subpanel active" id="t-bildung">
+        <div class="card">
+          <h3>Zwei neue Zeiten <span class="tag">neu</span></h3>
+          <div class="cat-grid" style="margin-top:6px;">
+            <div class="cat-card cat-2">
+              <span class="num">SI-SATZ</span>
+              <h4>plus-que-parfait</h4>
+              <p class="note" style="margin-top:0;"><b>avoir / être im imparfait</b> + participe passé</p>
+              <div class="example"><span class="fr">j'<u>avais</u> mangé</span><span class="de">ich hatte gegessen</span></div>
+              <div class="example"><span class="fr">elle <u>était</u> partie</span><span class="de">sie war gegangen</span></div>
+            </div>
+            <div class="cat-card cat-5">
+              <span class="num">HAUPTSATZ</span>
+              <h4>conditionnel passé</h4>
+              <p class="note" style="margin-top:0;"><b>avoir / être im conditionnel</b> + participe passé</p>
+              <div class="example"><span class="fr">j'<u>aurais</u> mangé</span><span class="de">ich hätte gegessen</span></div>
+              <div class="example"><span class="fr">elle <u>serait</u> partie</span><span class="de">sie wäre gegangen</span></div>
+            </div>
+          </div>
+          <div class="rule-box" style="margin:6px 0 0;"><b>Formel:</b> si + plus-que-parfait → conditionnel passé<br><i>Si j'avais eu le temps, je serais venu.</i> (Wenn ich Zeit gehabt hätte, wäre ich gekommen.)</div>
+        </div>
+
+        <div class="sheet-grid" style="margin-bottom:22px;">
+          <div class="card">
+            <h3 class="sheet-title">avoir und être</h3>
+            <table class="mini">
+              <tr><th></th><th>imparfait</th><th>conditionnel</th></tr>
+              <tr><td>j'</td><td>avais</td><td>aurais</td></tr>
+              <tr><td>tu</td><td>avais</td><td>aurais</td></tr>
+              <tr><td>il / elle</td><td>avait</td><td>aurait</td></tr>
+              <tr><td>nous</td><td>avions</td><td>aurions</td></tr>
+              <tr><td>vous</td><td>aviez</td><td>auriez</td></tr>
+              <tr><td>ils / elles</td><td>avaient</td><td>auraient</td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h3 class="sheet-title">&nbsp;</h3>
+            <table class="mini">
+              <tr><th></th><th>imparfait</th><th>conditionnel</th></tr>
+              <tr><td>j'</td><td>étais</td><td>serais</td></tr>
+              <tr><td>tu</td><td>étais</td><td>serais</td></tr>
+              <tr><td>il / elle</td><td>était</td><td>serait</td></tr>
+              <tr><td>nous</td><td>étions</td><td>serions</td></tr>
+              <tr><td>vous</td><td>étiez</td><td>seriez</td></tr>
+              <tr><td>ils / elles</td><td>étaient</td><td>seraient</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Avoir oder être? <span class="tag">wie im passé composé</span></h3>
+          <ul class="rules-list">
+            <li>Die meisten Verben: <b>avoir</b> → si j'avais mangé, j'aurais gagné.</li>
+            <li>Bewegung, Zustandswechsel und alle reflexiven Verben: <b>être</b> → aller, venir, arriver, partir, rester, tomber, naître, mourir, se lever …</li>
+            <li>Mit <b>être</b> gleicht sich das participe passé an das Subjekt an: elle était part<b>ie</b>, nous serions all<b>és</b>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subpanel" id="t-labor">
+        <div class="rule-box" style="margin-top:0;">
+          <b>Das Satzlabor:</b> Derselbe Gedanke in allen drei Typen. Achte darauf, wie sich <b>beide</b> Satzteile verändern.
+        </div>
+        <div class="card">
+          <h3>Wähle einen Satz <span class="tag">klick!</span></h3>
+          <div class="scn-nav" id="scnNav"></div>
+          <div id="scnView"></div>
+        </div>
+      </div>
+
+      <div class="subpanel" id="t-fallen">
+        <div class="cat-grid">
+          <div class="cat-card cat-4">
+            <span class="num">FALLE 1</span>
+            <h4>Kein conditionnel nach si</h4>
+            <div class="example"><span class="fr">Si j'avais eu le temps, je serais venu.</span><span class="de">richtig</span></div>
+            <div class="example"><span class="fr">Si j'aurais eu le temps …</span><span class="de">falsch, auch wenn es im Deutschen „hätte“ heißt</span></div>
+          </div>
+          <div class="cat-card cat-6">
+            <span class="num">FALLE 2</span>
+            <h4>Verneinung</h4>
+            <p class="note" style="margin-top:0;">ne … pas steht um das <b>Hilfsverb</b>, nicht um das participe passé.</p>
+            <div class="example"><span class="fr">Si tu n'avais pas dormi, tu aurais vu le film.</span><span class="de">Wenn du nicht geschlafen hättest, …</span></div>
+            <div class="example"><span class="fr">Il ne serait pas venu.</span><span class="de">Er wäre nicht gekommen.</span></div>
+          </div>
+          <div class="cat-card cat-2">
+            <span class="num">FALLE 3</span>
+            <h4>Angleichung bei être</h4>
+            <div class="example"><span class="fr">Si elle était partie, elle serait arrivée à l'heure.</span><span class="de">Beide participes haben -e.</span></div>
+            <div class="example"><span class="fr">Si nous étions restés, nous aurions vu ça.</span><span class="de">Plural: -s</span></div>
+          </div>
+          <div class="cat-card cat-5">
+            <span class="num">FALLE 4</span>
+            <h4>Pronomen und reflexive Verben</h4>
+            <p class="note" style="margin-top:0;">Das Pronomen steht vor dem Hilfsverb. Reflexive Verben nehmen immer être.</p>
+            <div class="example"><span class="fr">Si tu m'avais aidé, j'aurais réussi.</span><span class="de">Wenn du mir geholfen hättest, …</span></div>
+            <div class="example"><span class="fr">Si elle s'était levée, elle serait arrivée.</span><span class="de">Wenn sie aufgestanden wäre, …</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SPICKZETTEL ===================== -->
+  <section class="panel" id="spick">
+    <h2 class="section-head">Der Spickzettel</h2>
+    <p class="section-lead">Alles zum Nachschlagen auf einer Seite. Du kannst ihn auch ausdrucken.</p>
+    <div class="flip-tools">
+      <div class="hint">Beim Ausdrucken wird nur der Spickzettel gedruckt.</div>
+      <button class="btn-big alt" id="printSpick" type="button">Spickzettel drucken</button>
+    </div>
+
+    <div class="print-area">
+      <div class="card">
+        <h3 class="sheet-title">Die drei Typen</h3>
+        <ul class="rules-list">
+          <li><b>Typ 1</b> (realistisch): si + <b>présent</b> → <b>futur simple</b><br><i>Si tu viens, nous irons au cinéma.</i></li>
+          <li><b>Typ 2</b> (unwahrscheinlich): si + <b>imparfait</b> → <b>conditionnel présent</b><br><i>Si j'avais le temps, je viendrais.</i></li>
+          <li><b>Typ 3</b> (vorbei): si + <b>plus-que-parfait</b> → <b>conditionnel passé</b><br><i>Si j'avais eu le temps, je serais venu.</i></li>
+        </ul>
+      </div>
+
+      <div class="sheet-grid" style="margin-bottom:22px;">
+        <div class="card">
+          <h3 class="sheet-title">Conditionnel présent</h3>
+          <p style="margin:0 0 8px;">Futur-Stamm + <b>-ais, -ais, -ait, -ions, -iez, -aient</b></p>
+          <table class="mini">
+            <tr><th></th><th>aller</th><th>faire</th></tr>
+            <tr><td>je</td><td>irais</td><td>ferais</td></tr>
+            <tr><td>nous</td><td>irions</td><td>ferions</td></tr>
+          </table>
+          <p class="matrix-note">Stämme: être ser- · avoir aur- · aller ir- · faire fer- · pouvoir pourr- · vouloir voudr- · devoir devr- · savoir saur- · venir viendr- · voir verr- · envoyer enverr-</p>
+        </div>
+        <div class="card">
+          <h3 class="sheet-title">Typ 3 bilden</h3>
+          <table class="mini">
+            <tr><th></th><th>si-Satz</th><th>Hauptsatz</th></tr>
+            <tr><td>avoir</td><td>j'avais mangé</td><td>j'aurais mangé</td></tr>
+            <tr><td>être</td><td>j'étais venu(e)</td><td>je serais venu(e)</td></tr>
+          </table>
+          <p class="matrix-note">Hilfsverb im imparfait bzw. conditionnel + participe passé. Mit être gleicht sich das participe an das Subjekt an.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="sheet-title">Fallen</h3>
+        <ul class="rules-list">
+          <li>Nach <b>si</b> nie futur und nie conditionnel.</li>
+          <li>si + il / ils → <b>s'il / s'ils</b>.</li>
+          <li>Der Hauptsatz darf zuerst stehen, dann kein Komma: <i>Je viendrais si j'avais le temps.</i></li>
+          <li>Verneinung um das Hilfsverb: <i>Il ne serait pas venu.</i></li>
+          <li>Reflexive Verben nehmen im Typ 3 être: <i>Si elle s'était levée …</i></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ÜBEN ===================== -->
+  <section class="panel" id="uebung">
+    <h2 class="section-head">Üben in drei Stufen</h2>
+    <p class="section-lead">Alle drei Typen sind gemischt. Du kannst dir jederzeit die <b>Lösung zeigen</b> lassen und gehst mit „Weiter“ in deinem Tempo voran.</p>
+
+    <div class="subnav-group">
+      <div class="subnav">
+        <button class="subnav-btn active c-reg" data-target="u-1" type="button">Stufe 1 · Erkennen</button>
+        <button class="subnav-btn c-b" data-target="u-2" type="button">Stufe 2 · Konjugieren</button>
+        <button class="subnav-btn c-irr" data-target="u-3" type="button">Stufe 3 · Übersetzen</button>
+      </div>
+
+      <div class="subpanel active" id="u-1">
+        <div class="rule-box" style="margin-top:0;"><b>Stufe 1:</b> Du wählst die richtige Form oder erkennst den Typ.</div>
+        <div class="quiz" data-set="s1"></div>
+      </div>
+      <div class="subpanel" id="u-2">
+        <div class="rule-box" style="margin-top:0;"><b>Stufe 2:</b> Du setzt die Verben in der richtigen Zeit ein. Es gibt immer zwei Lücken.</div>
+        <div class="quiz" data-set="s2"></div>
+      </div>
+      <div class="subpanel" id="u-3">
+        <div class="rule-box" style="margin-top:0;"><b>Stufe 3:</b> Du übersetzt ganze Sätze. Danach zeigst du dir die Lösung und bewertest dich selbst. Mehrere Varianten können richtig sein.</div>
+        <div class="quiz" data-set="s3"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">10ab Horlacher</footer>
+</div>
+
+<script src="engine.js"></script>
+<script>
+// ===================== ÜBERBLICK-KARTEN =====================
+const TRICK = (tag, text) => `<div class="trick"><b>${tag}</b>${text}</div>`;
+const P = (label, form) => `<div class="pr"><small>${label}</small><b>${form}</b></div>`;
+
+const CARDS = {
+  t1: { cls:'k-sujet', badge:'RÉVISION',
+    title:'Möglich', name:'TYP 1 · si + présent',
+    wozu:'Die Bedingung kann <u>wirklich eintreten</u>. Du sprichst über Gegenwart oder Zukunft.',
+    trick:['FORMEL','si + présent → futur simple'],
+    fr:'S’il pleut, nous resterons à la maison.', de:'Wenn es regnet, bleiben wir zu Hause.',
+    back:`<div class="bhead">Typ 1</div>
+      ${TRICK('SI-SATZ','présent: si tu viens, si on a le temps')}
+      ${TRICK('HAUPTSATZ','futur simple, manchmal présent oder impératif: Si tu as faim, mange !')}
+      ${TRICK('FALLE','Nach si nie futur: si tu viens (nicht: si tu viendras).')}` },
+  t2: { cls:'k-cod', badge:'RÉVISION',
+    title:'Unwahrscheinlich', name:'TYP 2 · si + imparfait',
+    wozu:'Die Bedingung ist <u>unwahrscheinlich oder erfunden</u>. Ein Gedankenspiel für Gegenwart oder Zukunft.',
+    trick:['FORMEL','si + imparfait → conditionnel présent'],
+    fr:'Si j’avais le temps, je viendrais.', de:'Wenn ich Zeit hätte, würde ich kommen.',
+    back:`<div class="bhead">Typ 2</div>
+      ${TRICK('SI-SATZ','imparfait: si j’avais, si nous étions')}
+      ${TRICK('HAUPTSATZ','conditionnel présent: je viendrais, tu irais')}
+      ${TRICK('FALLE','Nach si nie conditionnel: si j’avais (nicht: si j’aurais).')}` },
+  t3: { cls:'k-coi', badge:'NEU', pro:true,
+    title:'Zu spät', name:'TYP 3 · si + plus-que-parfait',
+    wozu:'Etwas ist in der <u>Vergangenheit</u> nicht passiert. Man kann es nicht mehr ändern.',
+    trick:['FORMEL','si + plus-que-parfait → conditionnel passé'],
+    fr:'Si j’avais eu le temps, je serais venu.', de:'Wenn ich Zeit gehabt hätte, wäre ich gekommen.',
+    back:`<div class="bhead">Typ 3</div>
+      ${TRICK('SI-SATZ','avoir / être im imparfait + participe passé: j’avais eu, elle était partie')}
+      ${TRICK('HAUPTSATZ','avoir / être im conditionnel + participe passé: je serais venu, j’aurais mangé')}
+      ${TRICK('TIPP','Im Deutschen heißt es beide Male „hätte / wäre“. Im Französischen sind es zwei verschiedene Zeiten.')}` }
+};
+
+function cardHTML(c){
+  return `<div class="flip ${c.cls}" tabindex="0" role="button" aria-pressed="false">
+    <div class="face front">
+      <span class="badge${c.pro?' pro':''}">${c.badge}</span>
+      <h4 class="ftitle">${c.title}</h4>
+      <div class="fname">${c.name}</div>
+      <p class="wozu">${c.wozu}</p>
+      <div class="trick"><b>${c.trick[0]}</b>${c.trick[1]}</div>
+      <div class="fex"><span class="fr">${c.fr}</span><span class="de">${c.de}</span></div>
+      <div class="tap">Tippen zum Umdrehen ›</div>
+    </div>
+    <div class="face back">
+      ${c.back}
+      <div class="tap">‹ Tippen zum Zurückdrehen</div>
+    </div>
+  </div>`;
+}
+document.getElementById('kartenMount').innerHTML =
+  `<div class="flip-grid">${['t1','t2','t3'].map(id=>cardHTML(CARDS[id])).join('')}</div>`;
+
+function toggleFlip(el, force){
+  const open = force===undefined ? !el.classList.contains('open') : force;
+  el.classList.toggle('open', open);
+  el.setAttribute('aria-pressed', open ? 'true' : 'false');
+}
+document.querySelectorAll('.flip').forEach(el=>{
+  el.addEventListener('click', ()=>toggleFlip(el));
+  el.addEventListener('keydown', e=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); toggleFlip(el); } });
+});
+document.getElementById('flipAll').addEventListener('click', ()=>document.querySelectorAll('.flip').forEach(el=>toggleFlip(el,true)));
+document.getElementById('flipNone').addEventListener('click', ()=>document.querySelectorAll('.flip').forEach(el=>toggleFlip(el,false)));
+
+// ===== Unregelmäßige Stämme =====
+const STEMS = [['être','ser-'],['avoir','aur-'],['aller','ir-'],['faire','fer-'],['pouvoir','pourr-'],['vouloir','voudr-'],
+  ['devoir','devr-'],['savoir','saur-'],['venir','viendr-'],['voir','verr-'],['envoyer','enverr-'],['falloir','faudr-']];
+document.getElementById('stems').innerHTML = STEMS.map(([v,s])=>P(v,s)).join('');
+
+// ===== Spickzettel drucken =====
+document.getElementById('printSpick').addEventListener('click', ()=>{
+  document.body.classList.add('printing-spick');
+  const done = ()=>{ document.body.classList.remove('printing-spick'); window.removeEventListener('afterprint', done); };
+  window.addEventListener('afterprint', done);
+  window.print();
+});
+
+// ===================== SATZLABOR =====================
+const scenarios = [
+  { label:'venir', t1:"Si j'ai le temps, <b class='pron'>je viendrai</b>.", t2:"Si j'avais le temps, <b class='pron'>je viendrais</b>.", t3:"Si j'avais eu le temps, <b class='pron'>je serais venu</b>.",
+    note:"<b>venir</b> nimmt im Typ 3 <b>être</b>." },
+  { label:'manger', t1:"Si tu as faim, <b class='pron'>tu mangeras</b>.", t2:"Si tu avais faim, <b class='pron'>tu mangerais</b>.", t3:"Si tu avais eu faim, <b class='pron'>tu aurais mangé</b>.",
+    note:"<b>manger</b> nimmt <b>avoir</b>." },
+  { label:'réussir', t1:"S'il travaille, <b class='pron'>il réussira</b>.", t2:"S'il travaillait, <b class='pron'>il réussirait</b>.", t3:"S'il avait travaillé, <b class='pron'>il aurait réussi</b>.",
+    note:"si + il wird zu <b>s'il</b>." },
+  { label:'partir', t1:"Si elle part tôt, <b class='pron'>elle arrivera</b> à l'heure.", t2:"Si elle partait tôt, <b class='pron'>elle arriverait</b> à l'heure.", t3:"Si elle était partie tôt, <b class='pron'>elle serait arrivée</b> à l'heure.",
+    note:"Mit <b>être</b> gleicht sich das participe passé an: elle était part<b>ie</b>, elle serait arriv<b>ée</b>." },
+  { label:'pouvoir', t1:"Si nous pouvons, <b class='pron'>nous irons</b> en Italie.", t2:"Si nous pouvions, <b class='pron'>nous irions</b> en Italie.", t3:"Si nous avions pu, <b class='pron'>nous serions allés</b> en Italie.",
+    note:"Unregelmäßige Stämme: aller → <b>ir-</b>. Das participe passé von pouvoir ist <b>pu</b>." },
+  { label:'Verneinung', t1:"S'il ne vient pas, <b class='pron'>je serai</b> triste.", t2:"S'il ne venait pas, <b class='pron'>je serais</b> triste.", t3:"S'il n'était pas venu, <b class='pron'>j'aurais été</b> triste.",
+    note:"Die Verneinung steht um das <b>Hilfsverb</b>: n'était pas venu. Und: j'aurais <b>été</b> ist das conditionnel passé von être." }
+];
+const scnNav = document.getElementById('scnNav');
+const scnView = document.getElementById('scnView');
+function showScenario(i){
+  const s = scenarios[i];
+  scnNav.querySelectorAll('.scn-btn').forEach((b,idx)=>b.classList.toggle('active', idx===i));
+  scnView.innerHTML = `
+    <div class="scn-col">
+      <div class="scn-box"><small>TYP 1 · SI + PRÉSENT → FUTUR</small>${s.t1}</div>
+      <div class="scn-box"><small>TYP 2 · SI + IMPARFAIT → CONDITIONNEL PRÉSENT</small>${s.t2}</div>
+      <div class="scn-box after"><small>TYP 3 · SI + PLUS-QUE-PARFAIT → CONDITIONNEL PASSÉ</small>${s.t3}</div>
+    </div>
+    <div class="rule-box" style="margin-bottom:0;">${s.note}</div>`;
+}
+scenarios.forEach((s,i)=>{
+  const b = document.createElement('button');
+  b.className = 'scn-btn'; b.type = 'button'; b.textContent = s.label;
+  b.addEventListener('click', ()=>showScenario(i));
+  scnNav.appendChild(b);
+});
+showScenario(0);
+
+// ===================== ÜBUNGSSÄTZE =====================
+const SETS = {
+  s1: [
+    { t:'mc', q:"Si tu viens, nous ______ au cinéma.", o:["irons","irions","serions allés"], c:0, e:"Typ 1: si + présent → futur simple (irons)." },
+    { t:'mc', q:"Si j'avais de l'argent, j'______ une voiture.", o:["achèterais","achèterai","aurais acheté"], c:0, e:"Typ 2: si + imparfait → conditionnel présent (j'achèterais)." },
+    { t:'mc', q:"Si elle avait étudié, elle ______ réussi.", o:["aurait","avait","aura"], c:0, e:"Typ 3: si + plus-que-parfait → conditionnel passé (elle aurait réussi)." },
+    { t:'mc', q:"Welcher Typ? <i>Si nous avions su, nous serions restés.</i>", o:["Typ 1","Typ 2","Typ 3"], c:2, e:"avions su ist plus-que-parfait, serions restés ist conditionnel passé: Typ 3." },
+    { t:'mc', q:"Welcher Typ? <i>Si je gagne, j'achèterai une moto.</i>", o:["Typ 1","Typ 2","Typ 3"], c:0, e:"gagne ist présent, achèterai ist futur simple: Typ 1." },
+    { t:'mc', q:"Welcher Typ? <i>Si j'étais riche, je voyagerais.</i>", o:["Typ 1","Typ 2","Typ 3"], c:1, e:"étais ist imparfait, voyagerais ist conditionnel présent: Typ 2." },
+    { t:'mc', q:"S'il pleut demain, nous ______ à la maison.", o:["resterons","resterions","serions restés"], c:0, e:"Typ 1: si + présent (pleut) → futur simple (resterons)." },
+    { t:'mc', q:"Si tu ______ plus vite, tu arriverais à l'heure.", o:["marchais","marcherais","as marché"], c:0, e:"Nach si steht im Typ 2 der imparfait (marchais), nie das conditionnel." },
+    { t:'mc', q:"Si vous aviez pris le train, vous ______ arrivés plus tôt.", o:["seriez","êtes","serez"], c:0, e:"Typ 3: conditionnel passé von arriver mit être: vous seriez arrivés." },
+    { t:'mc', q:"Welcher Satz ist richtig?", o:["Si j'aurais le temps, je viendrais.","Si j'avais le temps, je viendrais.","Si j'ai le temps, je viendrais."], c:1, e:"Typ 2: si + imparfait, im Hauptsatz das conditionnel. Nach si nie conditionnel." },
+    { t:'mc', q:"Wenn ich Zeit gehabt hätte, wäre ich gekommen.", o:["Si j'avais le temps, je viendrais.","Si j'avais eu le temps, je serais venu.","Si j'ai eu le temps, je viendrai."], c:1, e:"Vergangenheit, nicht mehr änderbar: Typ 3 (plus-que-parfait + conditionnel passé)." },
+    { t:'mc', q:"Welches ist das conditionnel présent von <i>aller</i> (il)?", o:["il irait","il ira","il allait"], c:0, e:"Stamm ir- + Endung -ait: il irait." }
+  ],
+  s2: [
+    { t:'gap', q:"Si tu ___ (venir), nous ___ (aller) au parc.", g:[["viens"],["irons"]], e:"Typ 1: présent + futur simple." },
+    { t:'gap', q:"Si j'___ (avoir) plus de temps, je ___ (lire) davantage.", g:[["avais"],["lirais"]], e:"Typ 2: imparfait + conditionnel présent." },
+    { t:'gap', q:"Si elle ___ (étudier), elle ___ (réussir) l'examen.", g:[["avait étudié"],["aurait réussi"]], e:"Typ 3: plus-que-parfait + conditionnel passé." },
+    { t:'gap', q:"S'il ___ (faire) beau, on ___ (jouer) dehors.", g:[["fait"],["jouera"]], e:"Typ 1: présent + futur simple." },
+    { t:'gap', q:"Si nous ___ (pouvoir), nous ___ (partir) en Italie.", g:[["pouvions"],["partirions"]], e:"Typ 2: imparfait + conditionnel présent." },
+    { t:'gap', q:"Si tu ___ (venir) hier, tu ___ (voir) le film.", g:[["étais venu","étais venue"],["aurais vu"]], e:"Typ 3: venir nimmt être (étais venu), voir nimmt avoir (aurais vu)." },
+    { t:'gap', q:"Si j'___ (être) toi, je ___ (dire) la vérité.", g:[["étais"],["dirais"]], e:"Typ 2: imparfait von être + conditionnel présent von dire." },
+    { t:'gap', q:"Si vous ___ (finir) tôt, vous ___ (pouvoir) sortir.", g:[["finissez"],["pourrez"]], e:"Typ 1: présent + futur simple. Stamm von pouvoir: pourr-." },
+    { t:'gap', q:"Si nous ___ (savoir), nous ___ (rester) à la maison.", g:[["avions su"],["serions restés","serions restées"]], e:"Typ 3: avions su (savoir mit avoir), serions restés (rester mit être)." },
+    { t:'gap', q:"Si elle ___ (savoir) la réponse, elle ___ (répondre).", g:[["savait"],["répondrait"]], e:"Typ 2: imparfait + conditionnel présent." },
+    { t:'gap', q:"Si on ___ (prendre) un taxi, on ___ (arriver) à l'heure.", g:[["avait pris"],["serait arrivé","serait arrivés"]], e:"Typ 3: avait pris (avoir), serait arrivé (arriver mit être)." },
+    { t:'gap', q:"Tu ___ (réussir) si tu ___ (travailler).", g:[["réussiras"],["travailles"]], e:"Typ 1: Der Hauptsatz steht zuerst, trotzdem gilt: futur simple im Hauptsatz, présent nach si." }
+  ],
+  s3: [
+    { t:'self', de:"Wenn ich mehr Zeit gehabt hätte, wäre ich ins Kino gegangen.",
+      a:"Si j'avais eu plus de temps, je serais allé(e) au cinéma.", e:"Typ 3. aller nimmt être, deshalb allé (bzw. allée)." },
+    { t:'self', de:"Wenn es morgen regnet, bleiben wir zu Hause.",
+      a:"S'il pleut demain, nous resterons à la maison.", e:"Typ 1. si + il wird zu s'il. Möglich auch: on restera." },
+    { t:'self', de:"Wenn ich du wäre, würde ich ihr die Wahrheit sagen.",
+      a:"Si j'étais toi, je lui dirais la vérité.", e:"Typ 2. Das Pronomen lui steht vor dem Verb." },
+    { t:'self', de:"Wenn sie früher aufgestanden wäre, hätte sie den Bus nicht verpasst.",
+      a:"Si elle s'était levée plus tôt, elle n'aurait pas raté le bus.", e:"Typ 3. se lever ist reflexiv und nimmt être: s'était levée. Statt raté geht auch manqué." },
+    { t:'self', de:"Wir würden mehr reisen, wenn wir mehr Geld hätten.",
+      a:"Nous voyagerions plus si nous avions plus d'argent.", e:"Typ 2. Der Hauptsatz steht zuerst, deshalb kein Komma." },
+    { t:'self', de:"Wenn du mir geholfen hättest, hätte ich es geschafft.",
+      a:"Si tu m'avais aidé(e), j'aurais réussi.", e:"Typ 3. Das Pronomen m' steht vor dem Hilfsverb." },
+    { t:'self', de:"Wenn du sie siehst, sag ihr bitte Hallo.",
+      a:"Si tu la vois, dis-lui bonjour.", e:"Typ 1 mit Imperativ im Hauptsatz." },
+    { t:'self', de:"Was hättest du gemacht, wenn du die Prüfung nicht bestanden hättest?",
+      a:"Qu'aurais-tu fait si tu n'avais pas réussi l'examen ?", e:"Typ 3. Die Verneinung steht um das Hilfsverb: n'avais pas réussi." },
+    { t:'self', de:"Wenn wir nicht so müde wären, würden wir ausgehen.",
+      a:"Si nous n'étions pas si fatigués, nous sortirions.", e:"Typ 2. Das Adjektiv fatigués gleicht sich an: Plural." },
+    { t:'self', de:"Wenn er es gewusst hätte, wäre er nicht gekommen.",
+      a:"S'il l'avait su, il ne serait pas venu.", e:"Typ 3. s'il, l' steht vor avait, und die Verneinung steht um serait." },
+    { t:'self', de:"Wenn ich Millionär wäre, würde ich ein Haus am Meer kaufen.",
+      a:"Si j'étais millionnaire, j'achèterais une maison au bord de la mer.", e:"Typ 2. Der Stamm von acheter ist achèter-." },
+    { t:'self', de:"Wenn das Wetter besser gewesen wäre, wären wir an den Strand gefahren.",
+      a:"Si le temps avait été meilleur, nous serions allés à la plage.", e:"Typ 3. avait été (être mit avoir) und serions allés (aller mit être)." }
+  ]
+};
+document.querySelectorAll('.quiz').forEach(el=>mountQuiz(el, SETS[el.dataset.set], {manual:true}));
+</script>
+</body>
+</html>
